@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `EntityKind` enum in crate `clang`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, EntityKind">
+
+    <title>clang::EntityKind - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='index.html'>clang</a></p><script>window.sidebarCurrent = {name: 'EntityKind', ty: 'enum', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content enum">
+<h1 class='fqn'><span class='in-band'>Enum <a href='index.html'>clang</a>::<wbr><a class='enum' href=''>EntityKind</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-3154' class='srclink' href='../src/clang/src/lib.rs.html#161-624' title='goto source code'>[src]</a></span></h1>
+<pre class='rust enum'>pub enum EntityKind {
+    UnexposedDecl,
+    StructDecl,
+    UnionDecl,
+    ClassDecl,
+    EnumDecl,
+    FieldDecl,
+    EnumConstantDecl,
+    FunctionDecl,
+    VarDecl,
+    ParmDecl,
+    ObjCInterfaceDecl,
+    ObjCCategoryDecl,
+    ObjCProtocolDecl,
+    ObjCPropertyDecl,
+    ObjCIvarDecl,
+    ObjCInstanceMethodDecl,
+    ObjCClassMethodDecl,
+    ObjCImplementationDecl,
+    ObjCCategoryImplDecl,
+    TypedefDecl,
+    Method,
+    Namespace,
+    LinkageSpec,
+    Constructor,
+    Destructor,
+    ConversionFunction,
+    TemplateTypeParameter,
+    NonTypeTemplateParameter,
+    TemplateTemplateParameter,
+    FunctionTemplate,
+    ClassTemplate,
+    ClassTemplatePartialSpecialization,
+    NamespaceAlias,
+    UsingDirective,
+    UsingDeclaration,
+    TypeAliasDecl,
+    ObjCSynthesizeDecl,
+    ObjCDynamicDecl,
+    AccessSpecifier,
+    ObjCSuperClassRef,
+    ObjCProtocolRef,
+    ObjCClassRef,
+    TypeRef,
+    BaseSpecifier,
+    TemplateRef,
+    NamespaceRef,
+    MemberRef,
+    LabelRef,
+    OverloadedDeclRef,
+    VariableRef,
+    UnexposedExpr,
+    DeclRefExpr,
+    MemberRefExpr,
+    CallExpr,
+    ObjCMessageExpr,
+    BlockExpr,
+    IntegerLiteral,
+    FloatingLiteral,
+    ImaginaryLiteral,
+    StringLiteral,
+    CharacterLiteral,
+    ParenExpr,
+    UnaryOperator,
+    ArraySubscriptExpr,
+    BinaryOperator,
+    CompoundAssignOperator,
+    ConditionalOperator,
+    CStyleCastExpr,
+    CompoundLiteralExpr,
+    InitListExpr,
+    AddrLabelExpr,
+    StmtExpr,
+    GenericSelectionExpr,
+    GNUNullExpr,
+    StaticCastExpr,
+    DynamicCastExpr,
+    ReinterpretCastExpr,
+    ConstCastExpr,
+    FunctionalCastExpr,
+    TypeidExpr,
+    BoolLiteralExpr,
+    NullPtrLiteralExpr,
+    ThisExpr,
+    ThrowExpr,
+    NewExpr,
+    DeleteExpr,
+    UnaryExpr,
+    ObjCStringLiteral,
+    ObjCEncodeExpr,
+    ObjCSelectorExpr,
+    ObjCProtocolExpr,
+    ObjCBridgedCastExpr,
+    PackExpansionExpr,
+    SizeOfPackExpr,
+    LambdaExpr,
+    ObjCBoolLiteralExpr,
+    ObjCSelfExpr,
+    OmpArraySectionExpr,
+    ObjCAvailabilityCheckExpr,
+    UnexposedStmt,
+    LabelStmt,
+    CompoundStmt,
+    CaseStmt,
+    DefaultStmt,
+    IfStmt,
+    SwitchStmt,
+    WhileStmt,
+    DoStmt,
+    ForStmt,
+    GotoStmt,
+    IndirectGotoStmt,
+    ContinueStmt,
+    BreakStmt,
+    ReturnStmt,
+    AsmStmt,
+    ObjCAtTryStmt,
+    ObjCAtCatchStmt,
+    ObjCAtFinallyStmt,
+    ObjCAtThrowStmt,
+    ObjCAtSynchronizedStmt,
+    ObjCAutoreleasePoolStmt,
+    ObjCForCollectionStmt,
+    CatchStmt,
+    TryStmt,
+    ForRangeStmt,
+    SehTryStmt,
+    SehExceptStmt,
+    SehFinallyStmt,
+    SehLeaveStmt,
+    MsAsmStmt,
+    NullStmt,
+    DeclStmt,
+    OmpParallelDirective,
+    OmpSimdDirective,
+    OmpForDirective,
+    OmpSectionsDirective,
+    OmpSectionDirective,
+    OmpSingleDirective,
+    OmpParallelForDirective,
+    OmpParallelSectionsDirective,
+    OmpTaskDirective,
+    OmpMasterDirective,
+    OmpCriticalDirective,
+    OmpTaskyieldDirective,
+    OmpBarrierDirective,
+    OmpTaskwaitDirective,
+    OmpFlushDirective,
+    OmpOrderedDirective,
+    OmpAtomicDirective,
+    OmpForSimdDirective,
+    OmpParallelForSimdDirective,
+    OmpTargetDirective,
+    OmpTeamsDirective,
+    OmpTaskgroupDirective,
+    OmpCancellationPointDirective,
+    OmpCancelDirective,
+    OmpTargetDataDirective,
+    OmpTaskLoopDirective,
+    OmpTaskLoopSimdDirective,
+    OmpDistributeDirective,
+    OmpTargetEnterDataDirective,
+    OmpTargetExitDataDirective,
+    OmpTargetParallelDirective,
+    OmpTargetParallelForDirective,
+    OmpTargetUpdateDirective,
+    OmpDistributeParallelForDirective,
+    OmpDistributeParallelForSimdDirective,
+    OmpDistributeSimdDirective,
+    OmpTargetParallelForSimdDirective,
+    TranslationUnit,
+    UnexposedAttr,
+    IbActionAttr,
+    IbOutletAttr,
+    IbOutletCollectionAttr,
+    FinalAttr,
+    OverrideAttr,
+    AnnotateAttr,
+    AsmLabelAttr,
+    PackedAttr,
+    PureAttr,
+    ConstAttr,
+    NoDuplicateAttr,
+    CudaConstantAttr,
+    CudaDeviceAttr,
+    CudaGlobalAttr,
+    CudaHostAttr,
+    CudaSharedAttr,
+    VisibilityAttr,
+    DllExport,
+    DllImport,
+    PreprocessingDirective,
+    MacroDefinition,
+    MacroExpansion,
+    InclusionDirective,
+    ModuleImportDecl,
+    TypeAliasTemplateDecl,
+    StaticAssert,
+    OverloadCandidate,
+}</pre><div class='docblock'><p>Indicates the categorization of an AST entity.</p>
+</div><h2 class='variants'>Variants</h2>
+<span id='variant.UnexposedDecl' class='variant'><span id='UnexposedDecl.v' class='invisible'><code>UnexposedDecl</code></span></span><div class='docblock'><p>A declaration whose specific type is not exposed via this interface.</p>
+</div><span id='variant.StructDecl' class='variant'><span id='StructDecl.v' class='invisible'><code>StructDecl</code></span></span><div class='docblock'><p>A C or C++ struct.</p>
+</div><span id='variant.UnionDecl' class='variant'><span id='UnionDecl.v' class='invisible'><code>UnionDecl</code></span></span><div class='docblock'><p>A C or C++ union.</p>
+</div><span id='variant.ClassDecl' class='variant'><span id='ClassDecl.v' class='invisible'><code>ClassDecl</code></span></span><div class='docblock'><p>A C++ class.</p>
+</div><span id='variant.EnumDecl' class='variant'><span id='EnumDecl.v' class='invisible'><code>EnumDecl</code></span></span><div class='docblock'><p>An enum.</p>
+</div><span id='variant.FieldDecl' class='variant'><span id='FieldDecl.v' class='invisible'><code>FieldDecl</code></span></span><div class='docblock'><p>A C field or C++ non-static data member in a struct, union, or class.</p>
+</div><span id='variant.EnumConstantDecl' class='variant'><span id='EnumConstantDecl.v' class='invisible'><code>EnumConstantDecl</code></span></span><div class='docblock'><p>An enum constant.</p>
+</div><span id='variant.FunctionDecl' class='variant'><span id='FunctionDecl.v' class='invisible'><code>FunctionDecl</code></span></span><div class='docblock'><p>A function.</p>
+</div><span id='variant.VarDecl' class='variant'><span id='VarDecl.v' class='invisible'><code>VarDecl</code></span></span><div class='docblock'><p>A variable.</p>
+</div><span id='variant.ParmDecl' class='variant'><span id='ParmDecl.v' class='invisible'><code>ParmDecl</code></span></span><div class='docblock'><p>A parameter.</p>
+</div><span id='variant.ObjCInterfaceDecl' class='variant'><span id='ObjCInterfaceDecl.v' class='invisible'><code>ObjCInterfaceDecl</code></span></span><div class='docblock'><p>An Objective-C <code>@interface</code>.</p>
+</div><span id='variant.ObjCCategoryDecl' class='variant'><span id='ObjCCategoryDecl.v' class='invisible'><code>ObjCCategoryDecl</code></span></span><div class='docblock'><p>An Objective-C <code>@interface</code> for a category.</p>
+</div><span id='variant.ObjCProtocolDecl' class='variant'><span id='ObjCProtocolDecl.v' class='invisible'><code>ObjCProtocolDecl</code></span></span><div class='docblock'><p>An Objective-C <code>@protocol</code> declaration.</p>
+</div><span id='variant.ObjCPropertyDecl' class='variant'><span id='ObjCPropertyDecl.v' class='invisible'><code>ObjCPropertyDecl</code></span></span><div class='docblock'><p>An Objective-C <code>@property</code> declaration.</p>
+</div><span id='variant.ObjCIvarDecl' class='variant'><span id='ObjCIvarDecl.v' class='invisible'><code>ObjCIvarDecl</code></span></span><div class='docblock'><p>An Objective-C instance variable.</p>
+</div><span id='variant.ObjCInstanceMethodDecl' class='variant'><span id='ObjCInstanceMethodDecl.v' class='invisible'><code>ObjCInstanceMethodDecl</code></span></span><div class='docblock'><p>An Objective-C instance method.</p>
+</div><span id='variant.ObjCClassMethodDecl' class='variant'><span id='ObjCClassMethodDecl.v' class='invisible'><code>ObjCClassMethodDecl</code></span></span><div class='docblock'><p>An Objective-C class method.</p>
+</div><span id='variant.ObjCImplementationDecl' class='variant'><span id='ObjCImplementationDecl.v' class='invisible'><code>ObjCImplementationDecl</code></span></span><div class='docblock'><p>An Objective-C <code>@implementation</code>.</p>
+</div><span id='variant.ObjCCategoryImplDecl' class='variant'><span id='ObjCCategoryImplDecl.v' class='invisible'><code>ObjCCategoryImplDecl</code></span></span><div class='docblock'><p>An Objective-C <code>@implementation</code> for a category.</p>
+</div><span id='variant.TypedefDecl' class='variant'><span id='TypedefDecl.v' class='invisible'><code>TypedefDecl</code></span></span><div class='docblock'><p>A typedef.</p>
+</div><span id='variant.Method' class='variant'><span id='Method.v' class='invisible'><code>Method</code></span></span><div class='docblock'><p>A C++ method.</p>
+</div><span id='variant.Namespace' class='variant'><span id='Namespace.v' class='invisible'><code>Namespace</code></span></span><div class='docblock'><p>A C++ namespace.</p>
+</div><span id='variant.LinkageSpec' class='variant'><span id='LinkageSpec.v' class='invisible'><code>LinkageSpec</code></span></span><div class='docblock'><p>A linkage specification (e.g., <code>extern &quot;C&quot;</code>).</p>
+</div><span id='variant.Constructor' class='variant'><span id='Constructor.v' class='invisible'><code>Constructor</code></span></span><div class='docblock'><p>A C++ constructor.</p>
+</div><span id='variant.Destructor' class='variant'><span id='Destructor.v' class='invisible'><code>Destructor</code></span></span><div class='docblock'><p>A C++ destructor.</p>
+</div><span id='variant.ConversionFunction' class='variant'><span id='ConversionFunction.v' class='invisible'><code>ConversionFunction</code></span></span><div class='docblock'><p>A C++ conversion function.</p>
+</div><span id='variant.TemplateTypeParameter' class='variant'><span id='TemplateTypeParameter.v' class='invisible'><code>TemplateTypeParameter</code></span></span><div class='docblock'><p>A C++ template type parameter.</p>
+</div><span id='variant.NonTypeTemplateParameter' class='variant'><span id='NonTypeTemplateParameter.v' class='invisible'><code>NonTypeTemplateParameter</code></span></span><div class='docblock'><p>A C++ template non-type parameter.</p>
+</div><span id='variant.TemplateTemplateParameter' class='variant'><span id='TemplateTemplateParameter.v' class='invisible'><code>TemplateTemplateParameter</code></span></span><div class='docblock'><p>A C++ template template parameter.</p>
+</div><span id='variant.FunctionTemplate' class='variant'><span id='FunctionTemplate.v' class='invisible'><code>FunctionTemplate</code></span></span><div class='docblock'><p>A C++ function template.</p>
+</div><span id='variant.ClassTemplate' class='variant'><span id='ClassTemplate.v' class='invisible'><code>ClassTemplate</code></span></span><div class='docblock'><p>A C++ class template.</p>
+</div><span id='variant.ClassTemplatePartialSpecialization' class='variant'><span id='ClassTemplatePartialSpecialization.v' class='invisible'><code>ClassTemplatePartialSpecialization</code></span></span><div class='docblock'><p>A C++ class template partial specialization.</p>
+</div><span id='variant.NamespaceAlias' class='variant'><span id='NamespaceAlias.v' class='invisible'><code>NamespaceAlias</code></span></span><div class='docblock'><p>A C++ namespace alias declaration.</p>
+</div><span id='variant.UsingDirective' class='variant'><span id='UsingDirective.v' class='invisible'><code>UsingDirective</code></span></span><div class='docblock'><p>A C++ using directive.</p>
+</div><span id='variant.UsingDeclaration' class='variant'><span id='UsingDeclaration.v' class='invisible'><code>UsingDeclaration</code></span></span><div class='docblock'><p>A C++ using declaration.</p>
+</div><span id='variant.TypeAliasDecl' class='variant'><span id='TypeAliasDecl.v' class='invisible'><code>TypeAliasDecl</code></span></span><div class='docblock'><p>A C++ type alias declaration.</p>
+</div><span id='variant.ObjCSynthesizeDecl' class='variant'><span id='ObjCSynthesizeDecl.v' class='invisible'><code>ObjCSynthesizeDecl</code></span></span><div class='docblock'><p>An Objective-C <code>@synthesize</code> definition.</p>
+</div><span id='variant.ObjCDynamicDecl' class='variant'><span id='ObjCDynamicDecl.v' class='invisible'><code>ObjCDynamicDecl</code></span></span><div class='docblock'><p>An Objective-C <code>@dynamic</code> definition.</p>
+</div><span id='variant.AccessSpecifier' class='variant'><span id='AccessSpecifier.v' class='invisible'><code>AccessSpecifier</code></span></span><div class='docblock'><p>An access specifier.</p>
+</div><span id='variant.ObjCSuperClassRef' class='variant'><span id='ObjCSuperClassRef.v' class='invisible'><code>ObjCSuperClassRef</code></span></span><div class='docblock'><p>A reference to a super class in Objective-C.</p>
+</div><span id='variant.ObjCProtocolRef' class='variant'><span id='ObjCProtocolRef.v' class='invisible'><code>ObjCProtocolRef</code></span></span><div class='docblock'><p>A reference to a protocol in Objective-C.</p>
+</div><span id='variant.ObjCClassRef' class='variant'><span id='ObjCClassRef.v' class='invisible'><code>ObjCClassRef</code></span></span><div class='docblock'><p>A reference to a class in Objective-C.</p>
+</div><span id='variant.TypeRef' class='variant'><span id='TypeRef.v' class='invisible'><code>TypeRef</code></span></span><div class='docblock'><p>A reference to a type declaration.</p>
+</div><span id='variant.BaseSpecifier' class='variant'><span id='BaseSpecifier.v' class='invisible'><code>BaseSpecifier</code></span></span><div class='docblock'><p>A base class specifier.</p>
+</div><span id='variant.TemplateRef' class='variant'><span id='TemplateRef.v' class='invisible'><code>TemplateRef</code></span></span><div class='docblock'><p>A reference to a class template, function template, template template parameter, or class
+template partial specialization.</p>
+</div><span id='variant.NamespaceRef' class='variant'><span id='NamespaceRef.v' class='invisible'><code>NamespaceRef</code></span></span><div class='docblock'><p>A reference to a namespace or namespace alias.</p>
+</div><span id='variant.MemberRef' class='variant'><span id='MemberRef.v' class='invisible'><code>MemberRef</code></span></span><div class='docblock'><p>A reference to a member of a struct, union, or class that occurs in some non-expression
+context.</p>
+</div><span id='variant.LabelRef' class='variant'><span id='LabelRef.v' class='invisible'><code>LabelRef</code></span></span><div class='docblock'><p>A reference to a labeled statement.</p>
+</div><span id='variant.OverloadedDeclRef' class='variant'><span id='OverloadedDeclRef.v' class='invisible'><code>OverloadedDeclRef</code></span></span><div class='docblock'><p>A reference to a set of overloaded functions or function templates that has not yet been
+resolved to a specific function or function template.</p>
+</div><span id='variant.VariableRef' class='variant'><span id='VariableRef.v' class='invisible'><code>VariableRef</code></span></span><div class='docblock'><p>A reference to a variable that occurs in some non-expression context.</p>
+</div><span id='variant.UnexposedExpr' class='variant'><span id='UnexposedExpr.v' class='invisible'><code>UnexposedExpr</code></span></span><div class='docblock'><p>An expression whose specific kind is not exposed via this interface.</p>
+</div><span id='variant.DeclRefExpr' class='variant'><span id='DeclRefExpr.v' class='invisible'><code>DeclRefExpr</code></span></span><div class='docblock'><p>An expression that refers to some value declaration, such as a function or enumerator.</p>
+</div><span id='variant.MemberRefExpr' class='variant'><span id='MemberRefExpr.v' class='invisible'><code>MemberRefExpr</code></span></span><div class='docblock'><p>An expression that refers to the member of a struct, union, or class.</p>
+</div><span id='variant.CallExpr' class='variant'><span id='CallExpr.v' class='invisible'><code>CallExpr</code></span></span><div class='docblock'><p>An expression that calls a function.</p>
+</div><span id='variant.ObjCMessageExpr' class='variant'><span id='ObjCMessageExpr.v' class='invisible'><code>ObjCMessageExpr</code></span></span><div class='docblock'><p>An expression that sends a message to an Objective-C object or class.</p>
+</div><span id='variant.BlockExpr' class='variant'><span id='BlockExpr.v' class='invisible'><code>BlockExpr</code></span></span><div class='docblock'><p>An expression that represents a block literal.</p>
+</div><span id='variant.IntegerLiteral' class='variant'><span id='IntegerLiteral.v' class='invisible'><code>IntegerLiteral</code></span></span><div class='docblock'><p>An integer literal.</p>
+</div><span id='variant.FloatingLiteral' class='variant'><span id='FloatingLiteral.v' class='invisible'><code>FloatingLiteral</code></span></span><div class='docblock'><p>A floating point number literal.</p>
+</div><span id='variant.ImaginaryLiteral' class='variant'><span id='ImaginaryLiteral.v' class='invisible'><code>ImaginaryLiteral</code></span></span><div class='docblock'><p>An imaginary number literal.</p>
+</div><span id='variant.StringLiteral' class='variant'><span id='StringLiteral.v' class='invisible'><code>StringLiteral</code></span></span><div class='docblock'><p>A string literal.</p>
+</div><span id='variant.CharacterLiteral' class='variant'><span id='CharacterLiteral.v' class='invisible'><code>CharacterLiteral</code></span></span><div class='docblock'><p>A character literal.</p>
+</div><span id='variant.ParenExpr' class='variant'><span id='ParenExpr.v' class='invisible'><code>ParenExpr</code></span></span><div class='docblock'><p>A parenthesized expression.</p>
+</div><span id='variant.UnaryOperator' class='variant'><span id='UnaryOperator.v' class='invisible'><code>UnaryOperator</code></span></span><div class='docblock'><p>Any unary expression other than <code>sizeof</code> and <code>alignof</code>.</p>
+</div><span id='variant.ArraySubscriptExpr' class='variant'><span id='ArraySubscriptExpr.v' class='invisible'><code>ArraySubscriptExpr</code></span></span><div class='docblock'><p>An array subscript expression (<code>[C99 6.5.2.1]</code>).</p>
+</div><span id='variant.BinaryOperator' class='variant'><span id='BinaryOperator.v' class='invisible'><code>BinaryOperator</code></span></span><div class='docblock'><p>A built-in binary expression (e.g., <code>x + y</code>).</p>
+</div><span id='variant.CompoundAssignOperator' class='variant'><span id='CompoundAssignOperator.v' class='invisible'><code>CompoundAssignOperator</code></span></span><div class='docblock'><p>A compound assignment expression (e.g., <code>x += y</code>).</p>
+</div><span id='variant.ConditionalOperator' class='variant'><span id='ConditionalOperator.v' class='invisible'><code>ConditionalOperator</code></span></span><div class='docblock'><p>A ternary expression.</p>
+</div><span id='variant.CStyleCastExpr' class='variant'><span id='CStyleCastExpr.v' class='invisible'><code>CStyleCastExpr</code></span></span><div class='docblock'><p>An explicit cast in C or a C-style cast in C++.</p>
+</div><span id='variant.CompoundLiteralExpr' class='variant'><span id='CompoundLiteralExpr.v' class='invisible'><code>CompoundLiteralExpr</code></span></span><div class='docblock'><p>A compound literal expression (<code>[C99 6.5.2.5]</code>).</p>
+</div><span id='variant.InitListExpr' class='variant'><span id='InitListExpr.v' class='invisible'><code>InitListExpr</code></span></span><div class='docblock'><p>A C or C++ initializer list.</p>
+</div><span id='variant.AddrLabelExpr' class='variant'><span id='AddrLabelExpr.v' class='invisible'><code>AddrLabelExpr</code></span></span><div class='docblock'><p>A GNU address of label expression.</p>
+</div><span id='variant.StmtExpr' class='variant'><span id='StmtExpr.v' class='invisible'><code>StmtExpr</code></span></span><div class='docblock'><p>A GNU statement expression.</p>
+</div><span id='variant.GenericSelectionExpr' class='variant'><span id='GenericSelectionExpr.v' class='invisible'><code>GenericSelectionExpr</code></span></span><div class='docblock'><p>A C11 generic selection expression.</p>
+</div><span id='variant.GNUNullExpr' class='variant'><span id='GNUNullExpr.v' class='invisible'><code>GNUNullExpr</code></span></span><div class='docblock'><p>A GNU <code>__null</code> expression.</p>
+</div><span id='variant.StaticCastExpr' class='variant'><span id='StaticCastExpr.v' class='invisible'><code>StaticCastExpr</code></span></span><div class='docblock'><p>A C++ <code>static_cast&lt;&gt;</code> expression.</p>
+</div><span id='variant.DynamicCastExpr' class='variant'><span id='DynamicCastExpr.v' class='invisible'><code>DynamicCastExpr</code></span></span><div class='docblock'><p>A C++ <code>dynamic_cast&lt;&gt;</code> expression.</p>
+</div><span id='variant.ReinterpretCastExpr' class='variant'><span id='ReinterpretCastExpr.v' class='invisible'><code>ReinterpretCastExpr</code></span></span><div class='docblock'><p>A C++ <code>reinterpret_cast&lt;&gt;</code> expression.</p>
+</div><span id='variant.ConstCastExpr' class='variant'><span id='ConstCastExpr.v' class='invisible'><code>ConstCastExpr</code></span></span><div class='docblock'><p>A C++ <code>const_cast&lt;&gt;</code> expression.</p>
+</div><span id='variant.FunctionalCastExpr' class='variant'><span id='FunctionalCastExpr.v' class='invisible'><code>FunctionalCastExpr</code></span></span><div class='docblock'><p>A C++ cast that uses &quot;function&quot; notation (e.g., <code>int(0.5)</code>).</p>
+</div><span id='variant.TypeidExpr' class='variant'><span id='TypeidExpr.v' class='invisible'><code>TypeidExpr</code></span></span><div class='docblock'><p>A C++ <code>typeid</code> expression.</p>
+</div><span id='variant.BoolLiteralExpr' class='variant'><span id='BoolLiteralExpr.v' class='invisible'><code>BoolLiteralExpr</code></span></span><div class='docblock'><p>A C++ boolean literal.</p>
+</div><span id='variant.NullPtrLiteralExpr' class='variant'><span id='NullPtrLiteralExpr.v' class='invisible'><code>NullPtrLiteralExpr</code></span></span><div class='docblock'><p>A C++ <code>nullptr</code> expression.</p>
+</div><span id='variant.ThisExpr' class='variant'><span id='ThisExpr.v' class='invisible'><code>ThisExpr</code></span></span><div class='docblock'><p>A C++ <code>this</code> expression.</p>
+</div><span id='variant.ThrowExpr' class='variant'><span id='ThrowExpr.v' class='invisible'><code>ThrowExpr</code></span></span><div class='docblock'><p>A C++ <code>throw</code> expression.</p>
+</div><span id='variant.NewExpr' class='variant'><span id='NewExpr.v' class='invisible'><code>NewExpr</code></span></span><div class='docblock'><p>A C++ <code>new</code> expression.</p>
+</div><span id='variant.DeleteExpr' class='variant'><span id='DeleteExpr.v' class='invisible'><code>DeleteExpr</code></span></span><div class='docblock'><p>A C++ <code>delete</code> expression.</p>
+</div><span id='variant.UnaryExpr' class='variant'><span id='UnaryExpr.v' class='invisible'><code>UnaryExpr</code></span></span><div class='docblock'><p>A unary expression.</p>
+</div><span id='variant.ObjCStringLiteral' class='variant'><span id='ObjCStringLiteral.v' class='invisible'><code>ObjCStringLiteral</code></span></span><div class='docblock'><p>An Objective-C string literal.</p>
+</div><span id='variant.ObjCEncodeExpr' class='variant'><span id='ObjCEncodeExpr.v' class='invisible'><code>ObjCEncodeExpr</code></span></span><div class='docblock'><p>An Objective-C <code>@encode</code> expression.</p>
+</div><span id='variant.ObjCSelectorExpr' class='variant'><span id='ObjCSelectorExpr.v' class='invisible'><code>ObjCSelectorExpr</code></span></span><div class='docblock'><p>An Objective-C <code>@selector</code> expression.</p>
+</div><span id='variant.ObjCProtocolExpr' class='variant'><span id='ObjCProtocolExpr.v' class='invisible'><code>ObjCProtocolExpr</code></span></span><div class='docblock'><p>An Objective-C <code>@protocol</code> expression.</p>
+</div><span id='variant.ObjCBridgedCastExpr' class='variant'><span id='ObjCBridgedCastExpr.v' class='invisible'><code>ObjCBridgedCastExpr</code></span></span><div class='docblock'><p>An Objective-C bridged cast expression.</p>
+</div><span id='variant.PackExpansionExpr' class='variant'><span id='PackExpansionExpr.v' class='invisible'><code>PackExpansionExpr</code></span></span><div class='docblock'><p>A C++11 parameter pack expansion expression.</p>
+</div><span id='variant.SizeOfPackExpr' class='variant'><span id='SizeOfPackExpr.v' class='invisible'><code>SizeOfPackExpr</code></span></span><div class='docblock'><p>A C++11 <code>sizeof...</code> expression.</p>
+</div><span id='variant.LambdaExpr' class='variant'><span id='LambdaExpr.v' class='invisible'><code>LambdaExpr</code></span></span><div class='docblock'><p>A C++11 lambda expression.</p>
+</div><span id='variant.ObjCBoolLiteralExpr' class='variant'><span id='ObjCBoolLiteralExpr.v' class='invisible'><code>ObjCBoolLiteralExpr</code></span></span><div class='docblock'><p>An Objective-C boolean literal.</p>
+</div><span id='variant.ObjCSelfExpr' class='variant'><span id='ObjCSelfExpr.v' class='invisible'><code>ObjCSelfExpr</code></span></span><div class='docblock'><p>An Objective-C <code>self</code> expression.</p>
+</div><span id='variant.OmpArraySectionExpr' class='variant'><span id='OmpArraySectionExpr.v' class='invisible'><code>OmpArraySectionExpr</code></span></span><div class='docblock'><p>An OpenMP array section expression.</p>
+
+<p>Only produced by <code>libclang</code> 3.8 and later.</p>
+</div><span id='variant.ObjCAvailabilityCheckExpr' class='variant'><span id='ObjCAvailabilityCheckExpr.v' class='invisible'><code>ObjCAvailabilityCheckExpr</code></span></span><div class='docblock'><p>An Objective-C availability check expression (e.g., <code>@available(macos 10.10, *)</code>).</p>
+
+<p>Only produced by <code>libclang</code> 3.9 and later.</p>
+</div><span id='variant.UnexposedStmt' class='variant'><span id='UnexposedStmt.v' class='invisible'><code>UnexposedStmt</code></span></span><div class='docblock'><p>A statement whose specific kind is not exposed via this interface.</p>
+</div><span id='variant.LabelStmt' class='variant'><span id='LabelStmt.v' class='invisible'><code>LabelStmt</code></span></span><div class='docblock'><p>A labelled statement in a function.</p>
+</div><span id='variant.CompoundStmt' class='variant'><span id='CompoundStmt.v' class='invisible'><code>CompoundStmt</code></span></span><div class='docblock'><p>A group of statements (e.g., a function body).</p>
+</div><span id='variant.CaseStmt' class='variant'><span id='CaseStmt.v' class='invisible'><code>CaseStmt</code></span></span><div class='docblock'><p>A <code>case</code> statement.</p>
+</div><span id='variant.DefaultStmt' class='variant'><span id='DefaultStmt.v' class='invisible'><code>DefaultStmt</code></span></span><div class='docblock'><p>A <code>default</code> statement.</p>
+</div><span id='variant.IfStmt' class='variant'><span id='IfStmt.v' class='invisible'><code>IfStmt</code></span></span><div class='docblock'><p>An <code>if</code> statement.</p>
+</div><span id='variant.SwitchStmt' class='variant'><span id='SwitchStmt.v' class='invisible'><code>SwitchStmt</code></span></span><div class='docblock'><p>A <code>switch</code> statement.</p>
+</div><span id='variant.WhileStmt' class='variant'><span id='WhileStmt.v' class='invisible'><code>WhileStmt</code></span></span><div class='docblock'><p>A <code>while</code> statement.</p>
+</div><span id='variant.DoStmt' class='variant'><span id='DoStmt.v' class='invisible'><code>DoStmt</code></span></span><div class='docblock'><p>A <code>do</code> statement.</p>
+</div><span id='variant.ForStmt' class='variant'><span id='ForStmt.v' class='invisible'><code>ForStmt</code></span></span><div class='docblock'><p>A <code>for</code> statement.</p>
+</div><span id='variant.GotoStmt' class='variant'><span id='GotoStmt.v' class='invisible'><code>GotoStmt</code></span></span><div class='docblock'><p>A <code>goto</code> statement.</p>
+</div><span id='variant.IndirectGotoStmt' class='variant'><span id='IndirectGotoStmt.v' class='invisible'><code>IndirectGotoStmt</code></span></span><div class='docblock'><p>An indirect <code>goto</code> statement.</p>
+</div><span id='variant.ContinueStmt' class='variant'><span id='ContinueStmt.v' class='invisible'><code>ContinueStmt</code></span></span><div class='docblock'><p>A <code>continue</code> statement.</p>
+</div><span id='variant.BreakStmt' class='variant'><span id='BreakStmt.v' class='invisible'><code>BreakStmt</code></span></span><div class='docblock'><p>A <code>break</code> statement.</p>
+</div><span id='variant.ReturnStmt' class='variant'><span id='ReturnStmt.v' class='invisible'><code>ReturnStmt</code></span></span><div class='docblock'><p>A <code>return</code> statement.</p>
+</div><span id='variant.AsmStmt' class='variant'><span id='AsmStmt.v' class='invisible'><code>AsmStmt</code></span></span><div class='docblock'><p>An inline assembly statement.</p>
+</div><span id='variant.ObjCAtTryStmt' class='variant'><span id='ObjCAtTryStmt.v' class='invisible'><code>ObjCAtTryStmt</code></span></span><div class='docblock'><p>An Objective-C <code>@try</code>-<code>@catch</code>-<code>@finally</code> statement.</p>
+</div><span id='variant.ObjCAtCatchStmt' class='variant'><span id='ObjCAtCatchStmt.v' class='invisible'><code>ObjCAtCatchStmt</code></span></span><div class='docblock'><p>An Objective-C <code>@catch</code> statement.</p>
+</div><span id='variant.ObjCAtFinallyStmt' class='variant'><span id='ObjCAtFinallyStmt.v' class='invisible'><code>ObjCAtFinallyStmt</code></span></span><div class='docblock'><p>An Objective-C <code>@finally</code> statement.</p>
+</div><span id='variant.ObjCAtThrowStmt' class='variant'><span id='ObjCAtThrowStmt.v' class='invisible'><code>ObjCAtThrowStmt</code></span></span><div class='docblock'><p>An Objective-C <code>@throw</code> statement.</p>
+</div><span id='variant.ObjCAtSynchronizedStmt' class='variant'><span id='ObjCAtSynchronizedStmt.v' class='invisible'><code>ObjCAtSynchronizedStmt</code></span></span><div class='docblock'><p>An Objective-C <code>@synchronized</code> statement.</p>
+</div><span id='variant.ObjCAutoreleasePoolStmt' class='variant'><span id='ObjCAutoreleasePoolStmt.v' class='invisible'><code>ObjCAutoreleasePoolStmt</code></span></span><div class='docblock'><p>An Objective-C autorelease pool statement.</p>
+</div><span id='variant.ObjCForCollectionStmt' class='variant'><span id='ObjCForCollectionStmt.v' class='invisible'><code>ObjCForCollectionStmt</code></span></span><div class='docblock'><p>An Objective-C collection statement.</p>
+</div><span id='variant.CatchStmt' class='variant'><span id='CatchStmt.v' class='invisible'><code>CatchStmt</code></span></span><div class='docblock'><p>A C++ catch statement.</p>
+</div><span id='variant.TryStmt' class='variant'><span id='TryStmt.v' class='invisible'><code>TryStmt</code></span></span><div class='docblock'><p>A C++ try statement.</p>
+</div><span id='variant.ForRangeStmt' class='variant'><span id='ForRangeStmt.v' class='invisible'><code>ForRangeStmt</code></span></span><div class='docblock'><p>A C++11 range-based for statement.</p>
+</div><span id='variant.SehTryStmt' class='variant'><span id='SehTryStmt.v' class='invisible'><code>SehTryStmt</code></span></span><div class='docblock'><p>A Windows Structured Exception Handling <code>__try</code> statement.</p>
+</div><span id='variant.SehExceptStmt' class='variant'><span id='SehExceptStmt.v' class='invisible'><code>SehExceptStmt</code></span></span><div class='docblock'><p>A Windows Structured Exception Handling <code>__except</code> statement.</p>
+</div><span id='variant.SehFinallyStmt' class='variant'><span id='SehFinallyStmt.v' class='invisible'><code>SehFinallyStmt</code></span></span><div class='docblock'><p>A Windows Structured Exception Handling <code>__finally</code> statement.</p>
+</div><span id='variant.SehLeaveStmt' class='variant'><span id='SehLeaveStmt.v' class='invisible'><code>SehLeaveStmt</code></span></span><div class='docblock'><p>A Windows Structured Exception Handling <code>__leave</code> statement.</p>
+</div><span id='variant.MsAsmStmt' class='variant'><span id='MsAsmStmt.v' class='invisible'><code>MsAsmStmt</code></span></span><div class='docblock'><p>A Microsoft inline assembly statement.</p>
+</div><span id='variant.NullStmt' class='variant'><span id='NullStmt.v' class='invisible'><code>NullStmt</code></span></span><div class='docblock'><p>A null statement.</p>
+</div><span id='variant.DeclStmt' class='variant'><span id='DeclStmt.v' class='invisible'><code>DeclStmt</code></span></span><div class='docblock'><p>An adaptor for mixing declarations with statements and expressions.</p>
+</div><span id='variant.OmpParallelDirective' class='variant'><span id='OmpParallelDirective.v' class='invisible'><code>OmpParallelDirective</code></span></span><div class='docblock'><p>An OpenMP parallel directive.</p>
+</div><span id='variant.OmpSimdDirective' class='variant'><span id='OmpSimdDirective.v' class='invisible'><code>OmpSimdDirective</code></span></span><div class='docblock'><p>An OpenMP SIMD directive.</p>
+</div><span id='variant.OmpForDirective' class='variant'><span id='OmpForDirective.v' class='invisible'><code>OmpForDirective</code></span></span><div class='docblock'><p>An OpenMP for directive.</p>
+</div><span id='variant.OmpSectionsDirective' class='variant'><span id='OmpSectionsDirective.v' class='invisible'><code>OmpSectionsDirective</code></span></span><div class='docblock'><p>An OpenMP sections directive.</p>
+</div><span id='variant.OmpSectionDirective' class='variant'><span id='OmpSectionDirective.v' class='invisible'><code>OmpSectionDirective</code></span></span><div class='docblock'><p>An OpenMP section directive.</p>
+</div><span id='variant.OmpSingleDirective' class='variant'><span id='OmpSingleDirective.v' class='invisible'><code>OmpSingleDirective</code></span></span><div class='docblock'><p>An OpenMP single directive.</p>
+</div><span id='variant.OmpParallelForDirective' class='variant'><span id='OmpParallelForDirective.v' class='invisible'><code>OmpParallelForDirective</code></span></span><div class='docblock'><p>An OpenMP parallel for directive.</p>
+</div><span id='variant.OmpParallelSectionsDirective' class='variant'><span id='OmpParallelSectionsDirective.v' class='invisible'><code>OmpParallelSectionsDirective</code></span></span><div class='docblock'><p>An OpenMP parallel sections directive.</p>
+</div><span id='variant.OmpTaskDirective' class='variant'><span id='OmpTaskDirective.v' class='invisible'><code>OmpTaskDirective</code></span></span><div class='docblock'><p>An OpenMP task directive.</p>
+</div><span id='variant.OmpMasterDirective' class='variant'><span id='OmpMasterDirective.v' class='invisible'><code>OmpMasterDirective</code></span></span><div class='docblock'><p>An OpenMP master directive.</p>
+</div><span id='variant.OmpCriticalDirective' class='variant'><span id='OmpCriticalDirective.v' class='invisible'><code>OmpCriticalDirective</code></span></span><div class='docblock'><p>An OpenMP critical directive.</p>
+</div><span id='variant.OmpTaskyieldDirective' class='variant'><span id='OmpTaskyieldDirective.v' class='invisible'><code>OmpTaskyieldDirective</code></span></span><div class='docblock'><p>An OpenMP taskyield directive.</p>
+</div><span id='variant.OmpBarrierDirective' class='variant'><span id='OmpBarrierDirective.v' class='invisible'><code>OmpBarrierDirective</code></span></span><div class='docblock'><p>An OpenMP barrier directive.</p>
+</div><span id='variant.OmpTaskwaitDirective' class='variant'><span id='OmpTaskwaitDirective.v' class='invisible'><code>OmpTaskwaitDirective</code></span></span><div class='docblock'><p>An OpenMP taskwait directive.</p>
+</div><span id='variant.OmpFlushDirective' class='variant'><span id='OmpFlushDirective.v' class='invisible'><code>OmpFlushDirective</code></span></span><div class='docblock'><p>An OpenMP flush directive.</p>
+</div><span id='variant.OmpOrderedDirective' class='variant'><span id='OmpOrderedDirective.v' class='invisible'><code>OmpOrderedDirective</code></span></span><div class='docblock'><p>An OpenMP ordered directive.</p>
+
+<p>Only produced by <code>libclang</code> 3.6 and later.</p>
+</div><span id='variant.OmpAtomicDirective' class='variant'><span id='OmpAtomicDirective.v' class='invisible'><code>OmpAtomicDirective</code></span></span><div class='docblock'><p>An OpenMP atomic directive.</p>
+
+<p>Only produced by <code>libclang</code> 3.6 and later.</p>
+</div><span id='variant.OmpForSimdDirective' class='variant'><span id='OmpForSimdDirective.v' class='invisible'><code>OmpForSimdDirective</code></span></span><div class='docblock'><p>An OpenMP for SIMD directive.</p>
+
+<p>Only produced by <code>libclang</code> 3.6 and later.</p>
+</div><span id='variant.OmpParallelForSimdDirective' class='variant'><span id='OmpParallelForSimdDirective.v' class='invisible'><code>OmpParallelForSimdDirective</code></span></span><div class='docblock'><p>An OpenMP parallel for SIMD directive.</p>
+
+<p>Only produced by <code>libclang</code> 3.6 and later.</p>
+</div><span id='variant.OmpTargetDirective' class='variant'><span id='OmpTargetDirective.v' class='invisible'><code>OmpTargetDirective</code></span></span><div class='docblock'><p>An OpenMP target directive.</p>
+
+<p>Only produced by <code>libclang</code> 3.6 and later.</p>
+</div><span id='variant.OmpTeamsDirective' class='variant'><span id='OmpTeamsDirective.v' class='invisible'><code>OmpTeamsDirective</code></span></span><div class='docblock'><p>An OpenMP teams directive.</p>
+
+<p>Only produced by <code>libclang</code> 3.6 and later.</p>
+</div><span id='variant.OmpTaskgroupDirective' class='variant'><span id='OmpTaskgroupDirective.v' class='invisible'><code>OmpTaskgroupDirective</code></span></span><div class='docblock'><p>An OpenMP taskgroup directive.</p>
+
+<p>Only produced by <code>libclang</code> 3.7 and later.</p>
+</div><span id='variant.OmpCancellationPointDirective' class='variant'><span id='OmpCancellationPointDirective.v' class='invisible'><code>OmpCancellationPointDirective</code></span></span><div class='docblock'><p>An OpenMP cancellation point directive.</p>
+
+<p>Only produced by <code>libclang</code> 3.7 and later.</p>
+</div><span id='variant.OmpCancelDirective' class='variant'><span id='OmpCancelDirective.v' class='invisible'><code>OmpCancelDirective</code></span></span><div class='docblock'><p>An OpenMP cancel directive.</p>
+
+<p>Only produced by <code>libclang</code> 3.7 and later.</p>
+</div><span id='variant.OmpTargetDataDirective' class='variant'><span id='OmpTargetDataDirective.v' class='invisible'><code>OmpTargetDataDirective</code></span></span><div class='docblock'><p>An OpenMP target data directive.</p>
+
+<p>Only produced by <code>libclang</code> 3.8 and later.</p>
+</div><span id='variant.OmpTaskLoopDirective' class='variant'><span id='OmpTaskLoopDirective.v' class='invisible'><code>OmpTaskLoopDirective</code></span></span><div class='docblock'><p>An OpenMP task loop directive.</p>
+
+<p>Only produced by <code>libclang</code> 3.8 and later.</p>
+</div><span id='variant.OmpTaskLoopSimdDirective' class='variant'><span id='OmpTaskLoopSimdDirective.v' class='invisible'><code>OmpTaskLoopSimdDirective</code></span></span><div class='docblock'><p>An OpenMP task loop SIMD directive.</p>
+
+<p>Only produced by <code>libclang</code> 3.8 and later.</p>
+</div><span id='variant.OmpDistributeDirective' class='variant'><span id='OmpDistributeDirective.v' class='invisible'><code>OmpDistributeDirective</code></span></span><div class='docblock'><p>An OpenMP distribute directive.</p>
+
+<p>Only produced by <code>libclang</code> 3.8 and later.</p>
+</div><span id='variant.OmpTargetEnterDataDirective' class='variant'><span id='OmpTargetEnterDataDirective.v' class='invisible'><code>OmpTargetEnterDataDirective</code></span></span><div class='docblock'><p>An OpenMP target enter data directive.</p>
+
+<p>Only produced by <code>libclang</code> 3.9 and later.</p>
+</div><span id='variant.OmpTargetExitDataDirective' class='variant'><span id='OmpTargetExitDataDirective.v' class='invisible'><code>OmpTargetExitDataDirective</code></span></span><div class='docblock'><p>An OpenMP target exit data directive.</p>
+
+<p>Only produced by <code>libclang</code> 3.9 and later.</p>
+</div><span id='variant.OmpTargetParallelDirective' class='variant'><span id='OmpTargetParallelDirective.v' class='invisible'><code>OmpTargetParallelDirective</code></span></span><div class='docblock'><p>An OpenMP target parallel directive.</p>
+
+<p>Only produced by <code>libclang</code> 3.9 and later.</p>
+</div><span id='variant.OmpTargetParallelForDirective' class='variant'><span id='OmpTargetParallelForDirective.v' class='invisible'><code>OmpTargetParallelForDirective</code></span></span><div class='docblock'><p>An OpenMP target parallel for directive.</p>
+
+<p>Only produced by <code>libclang</code> 3.9 and later.</p>
+</div><span id='variant.OmpTargetUpdateDirective' class='variant'><span id='OmpTargetUpdateDirective.v' class='invisible'><code>OmpTargetUpdateDirective</code></span></span><div class='docblock'><p>An OpenMP target update directive.</p>
+
+<p>Only produced by <code>libclang</code> 3.9 and later.</p>
+</div><span id='variant.OmpDistributeParallelForDirective' class='variant'><span id='OmpDistributeParallelForDirective.v' class='invisible'><code>OmpDistributeParallelForDirective</code></span></span><div class='docblock'><p>An OpenMP distribute parallel for directive.</p>
+
+<p>Only produced by <code>libclang</code> 3.9 and later.</p>
+</div><span id='variant.OmpDistributeParallelForSimdDirective' class='variant'><span id='OmpDistributeParallelForSimdDirective.v' class='invisible'><code>OmpDistributeParallelForSimdDirective</code></span></span><div class='docblock'><p>An OpenMP distribute parallel for SIMD directive.</p>
+
+<p>Only produced by <code>libclang</code> 3.9 and later.</p>
+</div><span id='variant.OmpDistributeSimdDirective' class='variant'><span id='OmpDistributeSimdDirective.v' class='invisible'><code>OmpDistributeSimdDirective</code></span></span><div class='docblock'><p>An OpenMP distribute SIMD directive.</p>
+
+<p>Only produced by <code>libclang</code> 3.9 and later.</p>
+</div><span id='variant.OmpTargetParallelForSimdDirective' class='variant'><span id='OmpTargetParallelForSimdDirective.v' class='invisible'><code>OmpTargetParallelForSimdDirective</code></span></span><div class='docblock'><p>An OpenMP target parallel for SIMD directive.</p>
+
+<p>Only produced by <code>libclang</code> 3.9 and later.</p>
+</div><span id='variant.TranslationUnit' class='variant'><span id='TranslationUnit.v' class='invisible'><code>TranslationUnit</code></span></span><div class='docblock'><p>The top-level AST entity which acts as the root for the other entitys.</p>
+</div><span id='variant.UnexposedAttr' class='variant'><span id='UnexposedAttr.v' class='invisible'><code>UnexposedAttr</code></span></span><div class='docblock'><p>An attribute whose specific kind is not exposed via this interface.</p>
+</div><span id='variant.IbActionAttr' class='variant'><span id='IbActionAttr.v' class='invisible'><code>IbActionAttr</code></span></span><div class='docblock'><p>An attribute applied to an Objective-C IBAction.</p>
+</div><span id='variant.IbOutletAttr' class='variant'><span id='IbOutletAttr.v' class='invisible'><code>IbOutletAttr</code></span></span><div class='docblock'><p>An attribute applied to an Objective-C IBOutlet.</p>
+</div><span id='variant.IbOutletCollectionAttr' class='variant'><span id='IbOutletCollectionAttr.v' class='invisible'><code>IbOutletCollectionAttr</code></span></span><div class='docblock'><p>An attribute applied to an Objective-C IBOutletCollection.</p>
+</div><span id='variant.FinalAttr' class='variant'><span id='FinalAttr.v' class='invisible'><code>FinalAttr</code></span></span><div class='docblock'><p>The <code>final</code> attribute.</p>
+</div><span id='variant.OverrideAttr' class='variant'><span id='OverrideAttr.v' class='invisible'><code>OverrideAttr</code></span></span><div class='docblock'><p>The <code>override</code> attribute.</p>
+</div><span id='variant.AnnotateAttr' class='variant'><span id='AnnotateAttr.v' class='invisible'><code>AnnotateAttr</code></span></span><div class='docblock'><p>An annotation attribute.</p>
+</div><span id='variant.AsmLabelAttr' class='variant'><span id='AsmLabelAttr.v' class='invisible'><code>AsmLabelAttr</code></span></span><div class='docblock'><p>An ASM label attribute.</p>
+</div><span id='variant.PackedAttr' class='variant'><span id='PackedAttr.v' class='invisible'><code>PackedAttr</code></span></span><div class='docblock'><p>An attribute that requests for packed records (e.g., <code>__attribute__ ((__packed__))</code>).</p>
+</div><span id='variant.PureAttr' class='variant'><span id='PureAttr.v' class='invisible'><code>PureAttr</code></span></span><div class='docblock'><p>An attribute that asserts a function has no side effects (e.g., <code>__attribute__((pure))</code>).</p>
+</div><span id='variant.ConstAttr' class='variant'><span id='ConstAttr.v' class='invisible'><code>ConstAttr</code></span></span><div class='docblock'><p>The <code>const</code> attribute.</p>
+</div><span id='variant.NoDuplicateAttr' class='variant'><span id='NoDuplicateAttr.v' class='invisible'><code>NoDuplicateAttr</code></span></span><div class='docblock'><p>An attribute that allows calls to a function to be duplicated by the optimized
+(e.g., <code>__attribute__((noduplicate))</code>).</p>
+</div><span id='variant.CudaConstantAttr' class='variant'><span id='CudaConstantAttr.v' class='invisible'><code>CudaConstantAttr</code></span></span><div class='docblock'><p>A CUDA constant attribute.</p>
+</div><span id='variant.CudaDeviceAttr' class='variant'><span id='CudaDeviceAttr.v' class='invisible'><code>CudaDeviceAttr</code></span></span><div class='docblock'><p>A CUDA device attribute.</p>
+</div><span id='variant.CudaGlobalAttr' class='variant'><span id='CudaGlobalAttr.v' class='invisible'><code>CudaGlobalAttr</code></span></span><div class='docblock'><p>A CUDA global attribute.</p>
+</div><span id='variant.CudaHostAttr' class='variant'><span id='CudaHostAttr.v' class='invisible'><code>CudaHostAttr</code></span></span><div class='docblock'><p>A CUDA host attribute.</p>
+</div><span id='variant.CudaSharedAttr' class='variant'><span id='CudaSharedAttr.v' class='invisible'><code>CudaSharedAttr</code></span></span><div class='docblock'><p>A CUDA shared attribute.</p>
+
+<p>Only produced by <code>libclang</code> 3.6 and later.</p>
+</div><span id='variant.VisibilityAttr' class='variant'><span id='VisibilityAttr.v' class='invisible'><code>VisibilityAttr</code></span></span><div class='docblock'><p>A linker visibility attribute.</p>
+
+<p>Only produced by <code>libclang</code> 3.8 and later.</p>
+</div><span id='variant.DllExport' class='variant'><span id='DllExport.v' class='invisible'><code>DllExport</code></span></span><div class='docblock'><p>A MSVC DLL export attribute.</p>
+
+<p>Only produced by <code>libclang</code> 3.8 and later.</p>
+</div><span id='variant.DllImport' class='variant'><span id='DllImport.v' class='invisible'><code>DllImport</code></span></span><div class='docblock'><p>A MSVC DLL import attribute.</p>
+
+<p>Only produced by <code>libclang</code> 3.8 and later.</p>
+</div><span id='variant.PreprocessingDirective' class='variant'><span id='PreprocessingDirective.v' class='invisible'><code>PreprocessingDirective</code></span></span><div class='docblock'><p>A preprocessing directive.</p>
+</div><span id='variant.MacroDefinition' class='variant'><span id='MacroDefinition.v' class='invisible'><code>MacroDefinition</code></span></span><div class='docblock'><p>A macro definition.</p>
+</div><span id='variant.MacroExpansion' class='variant'><span id='MacroExpansion.v' class='invisible'><code>MacroExpansion</code></span></span><div class='docblock'><p>A macro expansion.</p>
+</div><span id='variant.InclusionDirective' class='variant'><span id='InclusionDirective.v' class='invisible'><code>InclusionDirective</code></span></span><div class='docblock'><p>An inclusion directive.</p>
+</div><span id='variant.ModuleImportDecl' class='variant'><span id='ModuleImportDecl.v' class='invisible'><code>ModuleImportDecl</code></span></span><div class='docblock'><p>A module import declaration.</p>
+</div><span id='variant.TypeAliasTemplateDecl' class='variant'><span id='TypeAliasTemplateDecl.v' class='invisible'><code>TypeAliasTemplateDecl</code></span></span><div class='docblock'><p>A C++11 alias template declaration (e.g., <code>template &lt;typename T&gt; using M = std::map&lt;T, T&gt;</code>).</p>
+
+<p>Only produced by <code>libclang</code> 3.8 and later.</p>
+</div><span id='variant.StaticAssert' class='variant'><span id='StaticAssert.v' class='invisible'><code>StaticAssert</code></span></span><div class='docblock'><p>A <code>static_assert</code> node.</p>
+
+<p>Only produced by <code>libclang</code> 3.9 and later.</p>
+</div><span id='variant.OverloadCandidate' class='variant'><span id='OverloadCandidate.v' class='invisible'><code>OverloadCandidate</code></span></span><div class='docblock'><p>A single overload in a set of overloads.</p>
+
+<p>Only produced by <code>libclang</code> 3.7 and later.</p>
+</div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Copy.html' title='core::marker::Copy'>Copy</a> for <a class='enum' href='../clang/enum.EntityKind.html' title='clang::EntityKind'>EntityKind</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-3551' class='srclink' href='../src/clang/src/lib.rs.html#159' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html' title='core::clone::Clone'>Clone</a> for <a class='enum' href='../clang/enum.EntityKind.html' title='clang::EntityKind'>EntityKind</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-3552' class='srclink' href='../src/clang/src/lib.rs.html#159' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.clone' class='method'><span id='clone.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone' class='fnname'>clone</a>(&amp;self) -&gt; <a class='enum' href='../clang/enum.EntityKind.html' title='clang::EntityKind'>EntityKind</a></code></span></h4>
+<div class='docblock'><p>Returns a copy of the value. <a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone">Read more</a></p>
+</div><h4 id='method.clone_from' class='method'><span id='clone_from.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from' class='fnname'>clone_from</a>(&amp;mut self, source: &amp;Self)</code><div class='since' title='Stable since Rust version 1.0.0'>1.0.0</div></span></h4>
+<div class='docblock'><p>Performs copy-assignment from <code>source</code>. <a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from">Read more</a></p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='enum' href='../clang/enum.EntityKind.html' title='clang::EntityKind'>EntityKind</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-3555' class='srclink' href='../src/clang/src/lib.rs.html#159' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.fmt' class='method'><span id='fmt.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></span></h4>
+<div class='docblock'><p>Formats the value using the given formatter.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html' title='core::cmp::PartialEq'>PartialEq</a> for <a class='enum' href='../clang/enum.EntityKind.html' title='clang::EntityKind'>EntityKind</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-3757' class='srclink' href='../src/clang/src/lib.rs.html#159' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.eq' class='method'><span id='eq.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html#tymethod.eq' class='fnname'>eq</a>(&amp;self, __arg_0: &amp;<a class='enum' href='../clang/enum.EntityKind.html' title='clang::EntityKind'>EntityKind</a>) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<div class='docblock'><p>This method tests for <code>self</code> and <code>other</code> values to be equal, and is used by <code>==</code>. <a href="https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html#tymethod.eq">Read more</a></p>
+</div><h4 id='method.ne' class='method'><span id='ne.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html#method.ne' class='fnname'>ne</a>(&amp;self, other: &amp;Rhs) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code><div class='since' title='Stable since Rust version 1.0.0'>1.0.0</div></span></h4>
+<div class='docblock'><p>This method tests for <code>!=</code>.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/cmp/trait.Eq.html' title='core::cmp::Eq'>Eq</a> for <a class='enum' href='../clang/enum.EntityKind.html' title='clang::EntityKind'>EntityKind</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-3763' class='srclink' href='../src/clang/src/lib.rs.html#159' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/hash/trait.Hash.html' title='core::hash::Hash'>Hash</a> for <a class='enum' href='../clang/enum.EntityKind.html' title='clang::EntityKind'>EntityKind</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-3766' class='srclink' href='../src/clang/src/lib.rs.html#159' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.hash' class='method'><span id='hash.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/hash/trait.Hash.html#tymethod.hash' class='fnname'>hash</a>&lt;__H:&nbsp;<a class='trait' href='https://doc.rust-lang.org/nightly/core/hash/trait.Hasher.html' title='core::hash::Hasher'>Hasher</a>&gt;(&amp;self, __arg_0: &amp;mut __H)</code></span></h4>
+<div class='docblock'><p>Feeds this value into the state given, updating the hasher as necessary.</p>
+</div><h4 id='method.hash_slice' class='method'><span id='hash_slice.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/hash/trait.Hash.html#method.hash_slice' class='fnname'>hash_slice</a>&lt;H&gt;(data: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.slice.html'>&amp;[Self]</a>, state: &amp;mut H) <span class='where'>where H: <a class='trait' href='https://doc.rust-lang.org/nightly/core/hash/trait.Hasher.html' title='core::hash::Hasher'>Hasher</a></span></code><div class='since' title='Stable since Rust version 1.3.0'>1.3.0</div></span></h4>
+<div class='docblock'><p>Feeds a slice of this type into the state provided.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "clang";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../jquery.js"></script>
+    <script src="../main.js"></script>
+    
+    <script defer src="../search-index.js"></script>
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `documentation` mod in crate `clang`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, documentation">
+
+    <title>clang::documentation - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='../index.html'>clang</a></p><script>window.sidebarCurrent = {name: 'documentation', ty: 'mod', relpath: '../'};</script><script defer src="../sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content mod">
+<h1 class='fqn'><span class='in-band'>Module <a href='../index.html'>clang</a>::<wbr><a class='mod' href=''>documentation</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-322' class='srclink' href='../../src/clang/src/documentation.rs.html#15-319' title='goto source code'>[src]</a></span></h1>
+<div class='docblock'><p>Comments.</p>
+</div><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.BlockCommand.html'
+                                  title='clang::documentation::BlockCommand'>BlockCommand</a></td>
+                           <td class='docblock-short'>
+                                <p>A block command with zero or more arguments and a paragraph as an argument.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.Comment.html'
+                                  title='clang::documentation::Comment'>Comment</a></td>
+                           <td class='docblock-short'>
+                                <p>A comment attached to a declaration.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.HtmlStartTag.html'
+                                  title='clang::documentation::HtmlStartTag'>HtmlStartTag</a></td>
+                           <td class='docblock-short'>
+                                <p>An HTML start tag.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.InlineCommand.html'
+                                  title='clang::documentation::InlineCommand'>InlineCommand</a></td>
+                           <td class='docblock-short'>
+                                <p>An inline command with word-like arguments.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.ParamCommand.html'
+                                  title='clang::documentation::ParamCommand'>ParamCommand</a></td>
+                           <td class='docblock-short'>
+                                <p>A <code>\param</code> command.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.TParamCommand.html'
+                                  title='clang::documentation::TParamCommand'>TParamCommand</a></td>
+                           <td class='docblock-short'>
+                                <p>A <code>\tparam</code> command.</p>
+                           </td>
+                       </tr></table><h2 id='enums' class='section-header'><a href="#enums">Enums</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.CommentChild.html'
+                                  title='clang::documentation::CommentChild'>CommentChild</a></td>
+                           <td class='docblock-short'>
+                                <p>A child component of a comment.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.InlineCommandStyle.html'
+                                  title='clang::documentation::InlineCommandStyle'>InlineCommandStyle</a></td>
+                           <td class='docblock-short'>
+                                <p>Indicates the appropriate rendering style for an inline command argument.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.ParameterDirection.html'
+                                  title='clang::documentation::ParameterDirection'>ParameterDirection</a></td>
+                           <td class='docblock-short'>
+                                <p>Indicates the parameter passing direction for a <code>\param</code> command.</p>
+                           </td>
+                       </tr></table></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "clang";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

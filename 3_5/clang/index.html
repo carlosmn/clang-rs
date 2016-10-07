@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `clang` crate.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, clang">
+
+    <title>clang - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'></p><script>window.sidebarCurrent = {name: 'clang', ty: 'mod', relpath: '../'};</script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content mod">
+<h1 class='fqn'><span class='in-band'>Crate <a class='mod' href=''>clang</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-0' class='srclink' href='../src/clang/src/lib.rs.html#15-2456' title='goto source code'>[src]</a></span></h1>
+<div class='docblock'><p>A somewhat idiomatic Rust wrapper for libclang.</p>
+
+<h2 id='supported-versions' class='section-header'><a href='#supported-versions'>Supported Versions</a></h2>
+<ul>
+<li>3.5 - <a href="https://kylemayes.github.io/clang-rs/3_5/clang">Documentation</a></li>
+<li>3.6 - <a href="https://kylemayes.github.io/clang-rs/3_6/clang">Documentation</a></li>
+<li>3.7 - <a href="https://kylemayes.github.io/clang-rs/3_7/clang">Documentation</a></li>
+<li>3.8 - <a href="https://kylemayes.github.io/clang-rs/3_8/clang">Documentation</a></li>
+<li>3.9 - <a href="https://kylemayes.github.io/clang-rs/3_9/clang">Documentation</a></li>
+</ul>
+</div><h2 id='modules' class='section-header'><a href="#modules">Modules</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='completion/index.html'
+                                  title='clang::completion'>completion</a></td>
+                           <td class='docblock-short'>
+                                <p>Code completion.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='diagnostic/index.html'
+                                  title='clang::diagnostic'>diagnostic</a></td>
+                           <td class='docblock-short'>
+                                <p>Issues with source files.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='documentation/index.html'
+                                  title='clang::documentation'>documentation</a></td>
+                           <td class='docblock-short'>
+                                <p>Comments.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='sonar/index.html'
+                                  title='clang::sonar'>sonar</a></td>
+                           <td class='docblock-short'>
+                                <p>Finding C declarations.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='source/index.html'
+                                  title='clang::source'>source</a></td>
+                           <td class='docblock-short'>
+                                <p>Source files, locations, and ranges.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='token/index.html'
+                                  title='clang::token'>token</a></td>
+                           <td class='docblock-short'>
+                                <p>Lexed pieces of source files.</p>
+                           </td>
+                       </tr></table><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.Clang.html'
+                                  title='clang::Clang'>Clang</a></td>
+                           <td class='docblock-short'>
+                                <p>An empty type which prevents the use of this library from multiple threads simultaneously.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.Entity.html'
+                                  title='clang::Entity'>Entity</a></td>
+                           <td class='docblock-short'>
+                                <p>An AST entity.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.Index.html'
+                                  title='clang::Index'>Index</a></td>
+                           <td class='docblock-short'>
+                                <p>A collection of translation units.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.ObjCAttributes.html'
+                                  title='clang::ObjCAttributes'>ObjCAttributes</a></td>
+                           <td class='docblock-short'>
+                                <p>Indicates which attributes were applied to an Objective-C property.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.ObjCQualifiers.html'
+                                  title='clang::ObjCQualifiers'>ObjCQualifiers</a></td>
+                           <td class='docblock-short'>
+                                <p>Indicates which qualifiers were applied to an Objective-C method return or parameter type.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.Parser.html'
+                                  title='clang::Parser'>Parser</a></td>
+                           <td class='docblock-short'>
+                                <p>Parses translation units.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.PlatformAvailability.html'
+                                  title='clang::PlatformAvailability'>PlatformAvailability</a></td>
+                           <td class='docblock-short'>
+                                <p>The availability of an AST entity on a particular platform.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.ThreadOptions.html'
+                                  title='clang::ThreadOptions'>ThreadOptions</a></td>
+                           <td class='docblock-short'>
+                                <p>A set of options that determines which types of threads should use background priority.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.TranslationUnit.html'
+                                  title='clang::TranslationUnit'>TranslationUnit</a></td>
+                           <td class='docblock-short'>
+                                <p>A preprocessed and parsed source file.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.Type.html'
+                                  title='clang::Type'>Type</a></td>
+                           <td class='docblock-short'>
+                                <p>The type of an AST entity.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.Unsaved.html'
+                                  title='clang::Unsaved'>Unsaved</a></td>
+                           <td class='docblock-short'>
+                                <p>The path to and unsaved contents of a previously existing file.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.Usr.html'
+                                  title='clang::Usr'>Usr</a></td>
+                           <td class='docblock-short'>
+                                <p>A Unified Symbol Resolution (USR).</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.Version.html'
+                                  title='clang::Version'>Version</a></td>
+                           <td class='docblock-short'>
+                                <p>A version number in the form <code>x.y.z</code>.</p>
+                           </td>
+                       </tr></table><h2 id='enums' class='section-header'><a href="#enums">Enums</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.Accessibility.html'
+                                  title='clang::Accessibility'>Accessibility</a></td>
+                           <td class='docblock-short'>
+                                <p>Indicates the accessibility of a declaration or base class specifier.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.AlignofError.html'
+                                  title='clang::AlignofError'>AlignofError</a></td>
+                           <td class='docblock-short'>
+                                <p>Indicates the error that prevented determining the alignment of a type.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.Availability.html'
+                                  title='clang::Availability'>Availability</a></td>
+                           <td class='docblock-short'>
+                                <p>Indicates the availability of an AST entity.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.CallingConvention.html'
+                                  title='clang::CallingConvention'>CallingConvention</a></td>
+                           <td class='docblock-short'>
+                                <p>Indicates the calling convention specified for a function type.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.EntityKind.html'
+                                  title='clang::EntityKind'>EntityKind</a></td>
+                           <td class='docblock-short'>
+                                <p>Indicates the categorization of an AST entity.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.EntityVisitResult.html'
+                                  title='clang::EntityVisitResult'>EntityVisitResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Indicates how a entity visitation should proceed.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.Language.html'
+                                  title='clang::Language'>Language</a></td>
+                           <td class='docblock-short'>
+                                <p>Indicates the language used by a declaration.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.Linkage.html'
+                                  title='clang::Linkage'>Linkage</a></td>
+                           <td class='docblock-short'>
+                                <p>Indicates the linkage of an AST entity.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.MemoryUsage.html'
+                                  title='clang::MemoryUsage'>MemoryUsage</a></td>
+                           <td class='docblock-short'>
+                                <p>Indicates the usage category of a quantity of memory.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.OffsetofError.html'
+                                  title='clang::OffsetofError'>OffsetofError</a></td>
+                           <td class='docblock-short'>
+                                <p>Indicates the error that prevented determining the offset of a field in a record type.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.RefQualifier.html'
+                                  title='clang::RefQualifier'>RefQualifier</a></td>
+                           <td class='docblock-short'>
+                                <p>Indicates the ref qualifier of a C++ function or method type.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.SaveError.html'
+                                  title='clang::SaveError'>SaveError</a></td>
+                           <td class='docblock-short'>
+                                <p>Indicates the type of error that prevented the saving of a translation unit to an AST file.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.SizeofError.html'
+                                  title='clang::SizeofError'>SizeofError</a></td>
+                           <td class='docblock-short'>
+                                <p>Indicates the error that prevented determining the size of a type.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.SourceError.html'
+                                  title='clang::SourceError'>SourceError</a></td>
+                           <td class='docblock-short'>
+                                <p>Indicates the type of error that prevented the loading of a translation unit from a source
+file.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.TypeKind.html'
+                                  title='clang::TypeKind'>TypeKind</a></td>
+                           <td class='docblock-short'>
+                                <p>Indicates the categorization of a type.</p>
+                           </td>
+                       </tr></table><h2 id='functions' class='section-header'><a href="#functions">Functions</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.get_version.html'
+                                  title='clang::get_version'>get_version</a></td>
+                           <td class='docblock-short'>
+                                <p>Returns the version string for the version of <code>libclang</code> in use.</p>
+                           </td>
+                       </tr></table></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "clang";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../jquery.js"></script>
+    <script src="../main.js"></script>
+    
+    <script defer src="../search-index.js"></script>
+</body>
+</html>

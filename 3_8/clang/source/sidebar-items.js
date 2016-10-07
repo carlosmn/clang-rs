@@ -1,0 +1,1 @@
+initSidebarItems({"struct":[["File","A source file."],["Location","The file, line, column, and character offset of a source location."],["Module","A collection of headers."],["SourceLocation","A location in a source file."],["SourceRange","A half-open range in a source file."]]});

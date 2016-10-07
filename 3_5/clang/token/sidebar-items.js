@@ -1,0 +1,1 @@
+initSidebarItems({"enum":[["TokenKind","Indicates the categorization of a token."]],"struct":[["Token","A lexed piece of a source file."]]});

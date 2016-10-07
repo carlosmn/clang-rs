@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `MemoryUsage` enum in crate `clang`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, MemoryUsage">
+
+    <title>clang::MemoryUsage - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='index.html'>clang</a></p><script>window.sidebarCurrent = {name: 'MemoryUsage', ty: 'enum', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content enum">
+<h1 class='fqn'><span class='in-band'>Enum <a href='index.html'>clang</a>::<wbr><a class='enum' href=''>MemoryUsage</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-3898' class='srclink' href='../src/clang/src/lib.rs.html#697-726' title='goto source code'>[src]</a></span></h1>
+<pre class='rust enum'>pub enum MemoryUsage {
+    Ast,
+    AstSideTables,
+    ExternalAstSourceMalloc,
+    ExternalAstSourceMMap,
+    GlobalCodeCompletionResults,
+    Identifiers,
+    PreprocessingRecord,
+    Preprocessor,
+    PreprocessorHeaderSearch,
+    Selectors,
+    SourceManagerContentCache,
+    SourceManagerDataStructures,
+    SourceManagerMalloc,
+    SourceManagerMMap,
+}</pre><div class='docblock'><p>Indicates the usage category of a quantity of memory.</p>
+</div><h2 class='variants'>Variants</h2>
+<span id='variant.Ast' class='variant'><span id='Ast.v' class='invisible'><code>Ast</code></span></span><div class='docblock'><p>Expressions, declarations, and types.</p>
+</div><span id='variant.AstSideTables' class='variant'><span id='AstSideTables.v' class='invisible'><code>AstSideTables</code></span></span><div class='docblock'><p>Various tables used by the AST.</p>
+</div><span id='variant.ExternalAstSourceMalloc' class='variant'><span id='ExternalAstSourceMalloc.v' class='invisible'><code>ExternalAstSourceMalloc</code></span></span><div class='docblock'><p>Memory allocated with <code>malloc</code> for external AST sources.</p>
+</div><span id='variant.ExternalAstSourceMMap' class='variant'><span id='ExternalAstSourceMMap.v' class='invisible'><code>ExternalAstSourceMMap</code></span></span><div class='docblock'><p>Memory allocated with <code>mmap</code> for external AST sources.</p>
+</div><span id='variant.GlobalCodeCompletionResults' class='variant'><span id='GlobalCodeCompletionResults.v' class='invisible'><code>GlobalCodeCompletionResults</code></span></span><div class='docblock'><p>Cached global code completion results.</p>
+</div><span id='variant.Identifiers' class='variant'><span id='Identifiers.v' class='invisible'><code>Identifiers</code></span></span><div class='docblock'><p>Identifiers.</p>
+</div><span id='variant.PreprocessingRecord' class='variant'><span id='PreprocessingRecord.v' class='invisible'><code>PreprocessingRecord</code></span></span><div class='docblock'><p>The preprocessing record.</p>
+</div><span id='variant.Preprocessor' class='variant'><span id='Preprocessor.v' class='invisible'><code>Preprocessor</code></span></span><div class='docblock'><p>Memory allocated with <code>malloc</code> for the preprocessor.</p>
+</div><span id='variant.PreprocessorHeaderSearch' class='variant'><span id='PreprocessorHeaderSearch.v' class='invisible'><code>PreprocessorHeaderSearch</code></span></span><div class='docblock'><p>Header search tables.</p>
+</div><span id='variant.Selectors' class='variant'><span id='Selectors.v' class='invisible'><code>Selectors</code></span></span><div class='docblock'><p>Selectors.</p>
+</div><span id='variant.SourceManagerContentCache' class='variant'><span id='SourceManagerContentCache.v' class='invisible'><code>SourceManagerContentCache</code></span></span><div class='docblock'><p>The content cache used by the source manager.</p>
+</div><span id='variant.SourceManagerDataStructures' class='variant'><span id='SourceManagerDataStructures.v' class='invisible'><code>SourceManagerDataStructures</code></span></span><div class='docblock'><p>Data structures used by the source manager.</p>
+</div><span id='variant.SourceManagerMalloc' class='variant'><span id='SourceManagerMalloc.v' class='invisible'><code>SourceManagerMalloc</code></span></span><div class='docblock'><p>Memory allocated with <code>malloc</code> for the source manager.</p>
+</div><span id='variant.SourceManagerMMap' class='variant'><span id='SourceManagerMMap.v' class='invisible'><code>SourceManagerMMap</code></span></span><div class='docblock'><p>Memory allocated with <code>mmap</code> for the source manager.</p>
+</div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Copy.html' title='core::marker::Copy'>Copy</a> for <a class='enum' href='../clang/enum.MemoryUsage.html' title='clang::MemoryUsage'>MemoryUsage</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-3927' class='srclink' href='../src/clang/src/lib.rs.html#695' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html' title='core::clone::Clone'>Clone</a> for <a class='enum' href='../clang/enum.MemoryUsage.html' title='clang::MemoryUsage'>MemoryUsage</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-3928' class='srclink' href='../src/clang/src/lib.rs.html#695' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.clone' class='method'><span id='clone.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone' class='fnname'>clone</a>(&amp;self) -&gt; <a class='enum' href='../clang/enum.MemoryUsage.html' title='clang::MemoryUsage'>MemoryUsage</a></code></span></h4>
+<div class='docblock'><p>Returns a copy of the value. <a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone">Read more</a></p>
+</div><h4 id='method.clone_from' class='method'><span id='clone_from.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from' class='fnname'>clone_from</a>(&amp;mut self, source: &amp;Self)</code><div class='since' title='Stable since Rust version 1.0.0'>1.0.0</div></span></h4>
+<div class='docblock'><p>Performs copy-assignment from <code>source</code>. <a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from">Read more</a></p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='enum' href='../clang/enum.MemoryUsage.html' title='clang::MemoryUsage'>MemoryUsage</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-3931' class='srclink' href='../src/clang/src/lib.rs.html#695' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.fmt' class='method'><span id='fmt.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></span></h4>
+<div class='docblock'><p>Formats the value using the given formatter.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html' title='core::cmp::PartialEq'>PartialEq</a> for <a class='enum' href='../clang/enum.MemoryUsage.html' title='clang::MemoryUsage'>MemoryUsage</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-3949' class='srclink' href='../src/clang/src/lib.rs.html#695' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.eq' class='method'><span id='eq.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html#tymethod.eq' class='fnname'>eq</a>(&amp;self, __arg_0: &amp;<a class='enum' href='../clang/enum.MemoryUsage.html' title='clang::MemoryUsage'>MemoryUsage</a>) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<div class='docblock'><p>This method tests for <code>self</code> and <code>other</code> values to be equal, and is used by <code>==</code>. <a href="https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html#tymethod.eq">Read more</a></p>
+</div><h4 id='method.ne' class='method'><span id='ne.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html#method.ne' class='fnname'>ne</a>(&amp;self, other: &amp;Rhs) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code><div class='since' title='Stable since Rust version 1.0.0'>1.0.0</div></span></h4>
+<div class='docblock'><p>This method tests for <code>!=</code>.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/cmp/trait.Eq.html' title='core::cmp::Eq'>Eq</a> for <a class='enum' href='../clang/enum.MemoryUsage.html' title='clang::MemoryUsage'>MemoryUsage</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-3955' class='srclink' href='../src/clang/src/lib.rs.html#695' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/hash/trait.Hash.html' title='core::hash::Hash'>Hash</a> for <a class='enum' href='../clang/enum.MemoryUsage.html' title='clang::MemoryUsage'>MemoryUsage</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-3958' class='srclink' href='../src/clang/src/lib.rs.html#695' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.hash' class='method'><span id='hash.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/hash/trait.Hash.html#tymethod.hash' class='fnname'>hash</a>&lt;__H:&nbsp;<a class='trait' href='https://doc.rust-lang.org/nightly/core/hash/trait.Hasher.html' title='core::hash::Hasher'>Hasher</a>&gt;(&amp;self, __arg_0: &amp;mut __H)</code></span></h4>
+<div class='docblock'><p>Feeds this value into the state given, updating the hasher as necessary.</p>
+</div><h4 id='method.hash_slice' class='method'><span id='hash_slice.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/hash/trait.Hash.html#method.hash_slice' class='fnname'>hash_slice</a>&lt;H&gt;(data: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.slice.html'>&amp;[Self]</a>, state: &amp;mut H) <span class='where'>where H: <a class='trait' href='https://doc.rust-lang.org/nightly/core/hash/trait.Hasher.html' title='core::hash::Hasher'>Hasher</a></span></code><div class='since' title='Stable since Rust version 1.3.0'>1.3.0</div></span></h4>
+<div class='docblock'><p>Feeds a slice of this type into the state provided.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "clang";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../jquery.js"></script>
+    <script src="../main.js"></script>
+    
+    <script defer src="../search-index.js"></script>
+</body>
+</html>

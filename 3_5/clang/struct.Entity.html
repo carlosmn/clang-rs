@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `Entity` struct in crate `clang`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, Entity">
+
+    <title>clang::Entity - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='index.html'>clang</a></p><script>window.sidebarCurrent = {name: 'Entity', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content struct">
+<h1 class='fqn'><span class='in-band'>Struct <a href='index.html'>clang</a>::<wbr><a class='struct' href=''>Entity</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-4156' class='srclink' href='../src/clang/src/lib.rs.html#991-994' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct Entity&lt;'tu&gt; { /* fields omitted */ }</pre><div class='docblock'><p>An AST entity.</p>
+</div><h2 id='methods'>Methods</h2><h3 class='impl'><span class='in-band'><code>impl&lt;'tu&gt; <a class='struct' href='../clang/struct.Entity.html' title='clang::Entity'>Entity</a>&lt;'tu&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a id='src-855' class='srclink' href='../src/clang/src/lib.rs.html#996-1650' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.get_kind' class='method'><span id='get_kind.v' class='invisible'><code>fn <a href='#method.get_kind' class='fnname'>get_kind</a>(&amp;self) -&gt; <a class='enum' href='../clang/enum.EntityKind.html' title='clang::EntityKind'>EntityKind</a></code></span></h4>
+<div class='docblock'><p>Returns the categorization of this AST entity.</p>
+</div><h4 id='method.get_display_name' class='method'><span id='get_display_name.v' class='invisible'><code>fn <a href='#method.get_display_name' class='fnname'>get_display_name</a>(&amp;self) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;</code></span></h4>
+<div class='docblock'><p>Returns the display name of this AST entity, if any.</p>
+
+<p>The display name of an entity contains additional information that helps identify the
+entity.</p>
+</div><h4 id='method.get_location' class='method'><span id='get_location.v' class='invisible'><code>fn <a href='#method.get_location' class='fnname'>get_location</a>(&amp;self) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../clang/source/struct.SourceLocation.html' title='clang::source::SourceLocation'>SourceLocation</a>&lt;'tu&gt;&gt;</code></span></h4>
+<div class='docblock'><p>Returns the source location of this AST entity, if any.</p>
+</div><h4 id='method.get_range' class='method'><span id='get_range.v' class='invisible'><code>fn <a href='#method.get_range' class='fnname'>get_range</a>(&amp;self) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../clang/source/struct.SourceRange.html' title='clang::source::SourceRange'>SourceRange</a>&lt;'tu&gt;&gt;</code></span></h4>
+<div class='docblock'><p>Returns the source range of this AST entity, if any.</p>
+</div><h4 id='method.get_accessibility' class='method'><span id='get_accessibility.v' class='invisible'><code>fn <a href='#method.get_accessibility' class='fnname'>get_accessibility</a>(&amp;self) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='enum' href='../clang/enum.Accessibility.html' title='clang::Accessibility'>Accessibility</a>&gt;</code></span></h4>
+<div class='docblock'><p>Returns the accessibility of this declaration or base class specifier, if applicable.</p>
+</div><h4 id='method.get_arguments' class='method'><span id='get_arguments.v' class='invisible'><code>fn <a href='#method.get_arguments' class='fnname'>get_arguments</a>(&amp;self) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='struct' href='../clang/struct.Entity.html' title='clang::Entity'>Entity</a>&lt;'tu&gt;&gt;&gt;</code></span></h4>
+<div class='docblock'><p>Returns the arguments of this function or method, if applicable.</p>
+</div><h4 id='method.get_availability' class='method'><span id='get_availability.v' class='invisible'><code>fn <a href='#method.get_availability' class='fnname'>get_availability</a>(&amp;self) -&gt; <a class='enum' href='../clang/enum.Availability.html' title='clang::Availability'>Availability</a></code></span></h4>
+<div class='docblock'><p>Returns the availability of this AST entity.</p>
+</div><h4 id='method.get_bit_field_width' class='method'><span id='get_bit_field_width.v' class='invisible'><code>fn <a href='#method.get_bit_field_width' class='fnname'>get_bit_field_width</a>(&amp;self) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>&gt;</code></span></h4>
+<div class='docblock'><p>Returns the width of this bit field, if applicable.</p>
+</div><h4 id='method.get_canonical_entity' class='method'><span id='get_canonical_entity.v' class='invisible'><code>fn <a href='#method.get_canonical_entity' class='fnname'>get_canonical_entity</a>(&amp;self) -&gt; <a class='struct' href='../clang/struct.Entity.html' title='clang::Entity'>Entity</a>&lt;'tu&gt;</code></span></h4>
+<div class='docblock'><p>Returns the canonical entity for this AST entity.</p>
+
+<p>In the C family of languages, some types of entities can be declared multiple times. When
+there are multiple declarations of the same entity, only one will be considered canonical.</p>
+</div><h4 id='method.get_comment' class='method'><span id='get_comment.v' class='invisible'><code>fn <a href='#method.get_comment' class='fnname'>get_comment</a>(&amp;self) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;</code></span></h4>
+<div class='docblock'><p>Returns the comment associated with this AST entity, if any.</p>
+</div><h4 id='method.get_parsed_comment' class='method'><span id='get_parsed_comment.v' class='invisible'><code>fn <a href='#method.get_parsed_comment' class='fnname'>get_parsed_comment</a>(&amp;self) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../clang/documentation/struct.Comment.html' title='clang::documentation::Comment'>Comment</a>&lt;'tu&gt;&gt;</code></span></h4>
+<div class='docblock'><p>Returns the parsed comment associated with this declaration, if application.</p>
+</div><h4 id='method.get_comment_brief' class='method'><span id='get_comment_brief.v' class='invisible'><code>fn <a href='#method.get_comment_brief' class='fnname'>get_comment_brief</a>(&amp;self) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;</code></span></h4>
+<div class='docblock'><p>Returns the brief of the comment associated with this AST entity, if any.</p>
+</div><h4 id='method.get_comment_range' class='method'><span id='get_comment_range.v' class='invisible'><code>fn <a href='#method.get_comment_range' class='fnname'>get_comment_range</a>(&amp;self) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../clang/source/struct.SourceRange.html' title='clang::source::SourceRange'>SourceRange</a>&lt;'tu&gt;&gt;</code></span></h4>
+<div class='docblock'><p>Returns the source range of the comment associated with this AST entity, if any.</p>
+</div><h4 id='method.get_completion_string' class='method'><span id='get_completion_string.v' class='invisible'><code>fn <a href='#method.get_completion_string' class='fnname'>get_completion_string</a>(&amp;self) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../clang/completion/struct.CompletionString.html' title='clang::completion::CompletionString'>CompletionString</a>&gt;</code></span></h4>
+<div class='docblock'><p>Returns a completion string for this declaration or macro definition, if applicable.</p>
+</div><h4 id='method.get_child' class='method'><span id='get_child.v' class='invisible'><code>fn <a href='#method.get_child' class='fnname'>get_child</a>(&amp;self, index: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../clang/struct.Entity.html' title='clang::Entity'>Entity</a>&lt;'tu&gt;&gt;</code></span></h4>
+<div class='docblock'><p>Returns the child of this AST entity with the supplied index.</p>
+</div><h4 id='method.get_children' class='method'><span id='get_children.v' class='invisible'><code>fn <a href='#method.get_children' class='fnname'>get_children</a>(&amp;self) -&gt; <a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='struct' href='../clang/struct.Entity.html' title='clang::Entity'>Entity</a>&lt;'tu&gt;&gt;</code></span></h4>
+<div class='docblock'><p>Returns the children of this AST entity.</p>
+</div><h4 id='method.get_definition' class='method'><span id='get_definition.v' class='invisible'><code>fn <a href='#method.get_definition' class='fnname'>get_definition</a>(&amp;self) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../clang/struct.Entity.html' title='clang::Entity'>Entity</a>&lt;'tu&gt;&gt;</code></span></h4>
+<div class='docblock'><p>Returns the AST entity that describes the definition of this AST entity, if any.</p>
+</div><h4 id='method.get_enum_constant_value' class='method'><span id='get_enum_constant_value.v' class='invisible'><code>fn <a href='#method.get_enum_constant_value' class='fnname'>get_enum_constant_value</a>(&amp;self) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>(</a><a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.i64.html'>i64</a>, <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u64.html'>u64</a><a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>)</a>&gt;</code></span></h4>
+<div class='docblock'><p>Returns the value of this enum constant declaration, if applicable.</p>
+</div><h4 id='method.get_enum_underlying_type' class='method'><span id='get_enum_underlying_type.v' class='invisible'><code>fn <a href='#method.get_enum_underlying_type' class='fnname'>get_enum_underlying_type</a>(&amp;self) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../clang/struct.Type.html' title='clang::Type'>Type</a>&lt;'tu&gt;&gt;</code></span></h4>
+<div class='docblock'><p>Returns the underlying type of this enum declaration, if applicable.</p>
+</div><h4 id='method.get_file' class='method'><span id='get_file.v' class='invisible'><code>fn <a href='#method.get_file' class='fnname'>get_file</a>(&amp;self) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../clang/source/struct.File.html' title='clang::source::File'>File</a>&lt;'tu&gt;&gt;</code></span></h4>
+<div class='docblock'><p>Returns the file included by this inclusion directive, if applicable.</p>
+</div><h4 id='method.get_language' class='method'><span id='get_language.v' class='invisible'><code>fn <a href='#method.get_language' class='fnname'>get_language</a>(&amp;self) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='enum' href='../clang/enum.Language.html' title='clang::Language'>Language</a>&gt;</code></span></h4>
+<div class='docblock'><p>Returns the language used by this declaration, if applicable.</p>
+</div><h4 id='method.get_lexical_parent' class='method'><span id='get_lexical_parent.v' class='invisible'><code>fn <a href='#method.get_lexical_parent' class='fnname'>get_lexical_parent</a>(&amp;self) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../clang/struct.Entity.html' title='clang::Entity'>Entity</a>&lt;'tu&gt;&gt;</code></span></h4>
+<div class='docblock'><p>Returns the lexical parent of this AST entity, if any.</p>
+</div><h4 id='method.get_linkage' class='method'><span id='get_linkage.v' class='invisible'><code>fn <a href='#method.get_linkage' class='fnname'>get_linkage</a>(&amp;self) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='enum' href='../clang/enum.Linkage.html' title='clang::Linkage'>Linkage</a>&gt;</code></span></h4>
+<div class='docblock'><p>Returns the linkage of this AST entity, if any.</p>
+</div><h4 id='method.get_module' class='method'><span id='get_module.v' class='invisible'><code>fn <a href='#method.get_module' class='fnname'>get_module</a>(&amp;self) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../clang/source/struct.Module.html' title='clang::source::Module'>Module</a>&lt;'tu&gt;&gt;</code></span></h4>
+<div class='docblock'><p>Returns the module imported by this module import declaration, if applicable.</p>
+</div><h4 id='method.get_name' class='method'><span id='get_name.v' class='invisible'><code>fn <a href='#method.get_name' class='fnname'>get_name</a>(&amp;self) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;</code></span></h4>
+<div class='docblock'><p>Returns the name of this AST entity, if any.</p>
+</div><h4 id='method.get_name_ranges' class='method'><span id='get_name_ranges.v' class='invisible'><code>fn <a href='#method.get_name_ranges' class='fnname'>get_name_ranges</a>(&amp;self) -&gt; <a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='struct' href='../clang/source/struct.SourceRange.html' title='clang::source::SourceRange'>SourceRange</a>&lt;'tu&gt;&gt;</code></span></h4>
+<div class='docblock'><p>Returns the source ranges of the name of this AST entity.</p>
+</div><h4 id='method.get_objc_attributes' class='method'><span id='get_objc_attributes.v' class='invisible'><code>fn <a href='#method.get_objc_attributes' class='fnname'>get_objc_attributes</a>(&amp;self) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../clang/struct.ObjCAttributes.html' title='clang::ObjCAttributes'>ObjCAttributes</a>&gt;</code></span></h4>
+<div class='docblock'><p>Returns which attributes were applied to this Objective-C property, if applicable.</p>
+</div><h4 id='method.get_objc_ib_outlet_collection_type' class='method'><span id='get_objc_ib_outlet_collection_type.v' class='invisible'><code>fn <a href='#method.get_objc_ib_outlet_collection_type' class='fnname'>get_objc_ib_outlet_collection_type</a>(&amp;self) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../clang/struct.Type.html' title='clang::Type'>Type</a>&lt;'tu&gt;&gt;</code></span></h4>
+<div class='docblock'><p>Returns the element type for this Objective-C <code>iboutletcollection</code> attribute, if applicable.</p>
+</div><h4 id='method.get_objc_receiver_type' class='method'><span id='get_objc_receiver_type.v' class='invisible'><code>fn <a href='#method.get_objc_receiver_type' class='fnname'>get_objc_receiver_type</a>(&amp;self) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../clang/struct.Type.html' title='clang::Type'>Type</a>&lt;'tu&gt;&gt;</code></span></h4>
+<div class='docblock'><p>Returns the type of the receiver of this Objective-C message, if applicable.</p>
+</div><h4 id='method.get_objc_selector_index' class='method'><span id='get_objc_selector_index.v' class='invisible'><code>fn <a href='#method.get_objc_selector_index' class='fnname'>get_objc_selector_index</a>(&amp;self) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>&gt;</code></span></h4>
+<div class='docblock'><p>Returns the selector index for this Objective-C selector identifier, if applicable.</p>
+</div><h4 id='method.get_objc_type_encoding' class='method'><span id='get_objc_type_encoding.v' class='invisible'><code>fn <a href='#method.get_objc_type_encoding' class='fnname'>get_objc_type_encoding</a>(&amp;self) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;</code></span></h4>
+<div class='docblock'><p>Returns the type encoding for this Objective-C declaration, if applicable.</p>
+</div><h4 id='method.get_objc_qualifiers' class='method'><span id='get_objc_qualifiers.v' class='invisible'><code>fn <a href='#method.get_objc_qualifiers' class='fnname'>get_objc_qualifiers</a>(&amp;self) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../clang/struct.ObjCQualifiers.html' title='clang::ObjCQualifiers'>ObjCQualifiers</a>&gt;</code></span></h4>
+<div class='docblock'><p>Returns which qualifiers were applied to this Objective-C method return or parameter type,
+if applicable.</p>
+</div><h4 id='method.get_overloaded_declarations' class='method'><span id='get_overloaded_declarations.v' class='invisible'><code>fn <a href='#method.get_overloaded_declarations' class='fnname'>get_overloaded_declarations</a>(&amp;self) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='struct' href='../clang/struct.Entity.html' title='clang::Entity'>Entity</a>&lt;'tu&gt;&gt;&gt;</code></span></h4>
+<div class='docblock'><p>Returns the overloaded declarations referenced by this overloaded declaration reference, if
+applicable.</p>
+</div><h4 id='method.get_overridden_methods' class='method'><span id='get_overridden_methods.v' class='invisible'><code>fn <a href='#method.get_overridden_methods' class='fnname'>get_overridden_methods</a>(&amp;self) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='struct' href='../clang/struct.Entity.html' title='clang::Entity'>Entity</a>&lt;'tu&gt;&gt;&gt;</code></span></h4>
+<div class='docblock'><p>Returns the methods that were overridden by this method, if applicable.</p>
+</div><h4 id='method.get_platform_availability' class='method'><span id='get_platform_availability.v' class='invisible'><code>fn <a href='#method.get_platform_availability' class='fnname'>get_platform_availability</a>(&amp;self) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='struct' href='../clang/struct.PlatformAvailability.html' title='clang::PlatformAvailability'>PlatformAvailability</a>&gt;&gt;</code></span></h4>
+<div class='docblock'><p>Returns the availability of this declaration on the platforms where it is known, if
+applicable.</p>
+</div><h4 id='method.get_reference' class='method'><span id='get_reference.v' class='invisible'><code>fn <a href='#method.get_reference' class='fnname'>get_reference</a>(&amp;self) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../clang/struct.Entity.html' title='clang::Entity'>Entity</a>&lt;'tu&gt;&gt;</code></span></h4>
+<div class='docblock'><p>Returns the AST entity referred to by this AST entity, if any.</p>
+</div><h4 id='method.get_semantic_parent' class='method'><span id='get_semantic_parent.v' class='invisible'><code>fn <a href='#method.get_semantic_parent' class='fnname'>get_semantic_parent</a>(&amp;self) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../clang/struct.Entity.html' title='clang::Entity'>Entity</a>&lt;'tu&gt;&gt;</code></span></h4>
+<div class='docblock'><p>Returns the semantic parent of this AST entity, if any.</p>
+</div><h4 id='method.get_template' class='method'><span id='get_template.v' class='invisible'><code>fn <a href='#method.get_template' class='fnname'>get_template</a>(&amp;self) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../clang/struct.Entity.html' title='clang::Entity'>Entity</a>&lt;'tu&gt;&gt;</code></span></h4>
+<div class='docblock'><p>Returns the template declaration this template specialization was instantiated from, if
+applicable.</p>
+</div><h4 id='method.get_template_kind' class='method'><span id='get_template_kind.v' class='invisible'><code>fn <a href='#method.get_template_kind' class='fnname'>get_template_kind</a>(&amp;self) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='enum' href='../clang/enum.EntityKind.html' title='clang::EntityKind'>EntityKind</a>&gt;</code></span></h4>
+<div class='docblock'><p>Returns the categorization of the template specialization that would result from
+instantiating this template declaration, if applicable.</p>
+</div><h4 id='method.get_translation_unit' class='method'><span id='get_translation_unit.v' class='invisible'><code>fn <a href='#method.get_translation_unit' class='fnname'>get_translation_unit</a>(&amp;self) -&gt; &amp;'tu <a class='struct' href='../clang/struct.TranslationUnit.html' title='clang::TranslationUnit'>TranslationUnit</a>&lt;'tu&gt;</code></span></h4>
+<div class='docblock'><p>Returns the translation unit which contains this AST entity.</p>
+</div><h4 id='method.get_type' class='method'><span id='get_type.v' class='invisible'><code>fn <a href='#method.get_type' class='fnname'>get_type</a>(&amp;self) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../clang/struct.Type.html' title='clang::Type'>Type</a>&lt;'tu&gt;&gt;</code></span></h4>
+<div class='docblock'><p>Returns the type of this AST entity, if any.</p>
+</div><h4 id='method.get_typedef_underlying_type' class='method'><span id='get_typedef_underlying_type.v' class='invisible'><code>fn <a href='#method.get_typedef_underlying_type' class='fnname'>get_typedef_underlying_type</a>(&amp;self) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../clang/struct.Type.html' title='clang::Type'>Type</a>&lt;'tu&gt;&gt;</code></span></h4>
+<div class='docblock'><p>Returns the underlying type of this typedef declaration, if applicable.</p>
+</div><h4 id='method.get_usr' class='method'><span id='get_usr.v' class='invisible'><code>fn <a href='#method.get_usr' class='fnname'>get_usr</a>(&amp;self) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../clang/struct.Usr.html' title='clang::Usr'>Usr</a>&gt;</code></span></h4>
+<div class='docblock'><p>Returns the USR for this AST entity, if any.</p>
+</div><h4 id='method.is_bit_field' class='method'><span id='is_bit_field.v' class='invisible'><code>fn <a href='#method.is_bit_field' class='fnname'>is_bit_field</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<div class='docblock'><p>Returns whether this AST entity is a bit field.</p>
+</div><h4 id='method.is_const_method' class='method'><span id='is_const_method.v' class='invisible'><code>fn <a href='#method.is_const_method' class='fnname'>is_const_method</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<div class='docblock'><p>Returns whether this AST entity is a const method.</p>
+</div><h4 id='method.is_definition' class='method'><span id='is_definition.v' class='invisible'><code>fn <a href='#method.is_definition' class='fnname'>is_definition</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<div class='docblock'><p>Returns whether this AST entity is a declaration and also the definition of that
+declaration.</p>
+</div><h4 id='method.is_dynamic_call' class='method'><span id='is_dynamic_call.v' class='invisible'><code>fn <a href='#method.is_dynamic_call' class='fnname'>is_dynamic_call</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<div class='docblock'><p>Returns whether this AST entity is a dynamic call.</p>
+
+<p>A dynamic call is either a call to a C++ virtual method or an Objective-C message where the
+receiver is an object instance, not <code>super</code> or a specific class.</p>
+</div><h4 id='method.is_objc_optional' class='method'><span id='is_objc_optional.v' class='invisible'><code>fn <a href='#method.is_objc_optional' class='fnname'>is_objc_optional</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<div class='docblock'><p>Returns whether this AST entity is an Objective-C method or property declaration with the
+<code>@optional</code> attribute applied to it.</p>
+</div><h4 id='method.is_pure_virtual_method' class='method'><span id='is_pure_virtual_method.v' class='invisible'><code>fn <a href='#method.is_pure_virtual_method' class='fnname'>is_pure_virtual_method</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<div class='docblock'><p>Returns whether this AST entity is a pure virtual method.</p>
+</div><h4 id='method.is_static_method' class='method'><span id='is_static_method.v' class='invisible'><code>fn <a href='#method.is_static_method' class='fnname'>is_static_method</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<div class='docblock'><p>Returns whether this AST entity is a static method.</p>
+</div><h4 id='method.is_variadic' class='method'><span id='is_variadic.v' class='invisible'><code>fn <a href='#method.is_variadic' class='fnname'>is_variadic</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<div class='docblock'><p>Returns whether this AST entity is a variadic function or method.</p>
+</div><h4 id='method.is_virtual_base' class='method'><span id='is_virtual_base.v' class='invisible'><code>fn <a href='#method.is_virtual_base' class='fnname'>is_virtual_base</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<div class='docblock'><p>Returns whether this AST entity is a virtual base class specifier.</p>
+</div><h4 id='method.is_virtual_method' class='method'><span id='is_virtual_method.v' class='invisible'><code>fn <a href='#method.is_virtual_method' class='fnname'>is_virtual_method</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<div class='docblock'><p>Returns whether this AST entity is a virtual method.</p>
+</div><h4 id='method.visit_children' class='method'><span id='visit_children.v' class='invisible'><code>fn <a href='#method.visit_children' class='fnname'>visit_children</a>&lt;F:&nbsp;<a class='trait' href='https://doc.rust-lang.org/nightly/core/ops/trait.FnMut.html' title='core::ops::FnMut'>FnMut</a>(<a class='struct' href='../clang/struct.Entity.html' title='clang::Entity'>Entity</a>&lt;'tu&gt;, <a class='struct' href='../clang/struct.Entity.html' title='clang::Entity'>Entity</a>&lt;'tu&gt;) -&gt; <a class='enum' href='../clang/enum.EntityVisitResult.html' title='clang::EntityVisitResult'>EntityVisitResult</a>&gt;(&amp;self, f: F) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<div class='docblock'><p>Visits the children of this AST entity recursively and returns whether visitation was ended
+by the callback returning <code>EntityVisitResult::Break</code>.</p>
+
+<p>The first argument of the callback is the AST entity being visited and the second argument
+is the parent of that AST entity. The return value of the callback determines how visitation
+will proceed.</p>
+</div><h4 id='method.is_attribute' class='method'><span id='is_attribute.v' class='invisible'><code>fn <a href='#method.is_attribute' class='fnname'>is_attribute</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<div class='docblock'><p>Returns whether this AST entity is categorized as an attribute.</p>
+</div><h4 id='method.is_declaration' class='method'><span id='is_declaration.v' class='invisible'><code>fn <a href='#method.is_declaration' class='fnname'>is_declaration</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<div class='docblock'><p>Returns whether this AST entity is categorized as a declaration.</p>
+</div><h4 id='method.is_expression' class='method'><span id='is_expression.v' class='invisible'><code>fn <a href='#method.is_expression' class='fnname'>is_expression</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<div class='docblock'><p>Returns whether this AST entity is categorized as an expression.</p>
+</div><h4 id='method.is_preprocessing' class='method'><span id='is_preprocessing.v' class='invisible'><code>fn <a href='#method.is_preprocessing' class='fnname'>is_preprocessing</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<div class='docblock'><p>Returns whether this AST entity is categorized as a preprocessing entity.</p>
+</div><h4 id='method.is_reference' class='method'><span id='is_reference.v' class='invisible'><code>fn <a href='#method.is_reference' class='fnname'>is_reference</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<div class='docblock'><p>Returns whether this AST entity is categorized as a reference.</p>
+</div><h4 id='method.is_statement' class='method'><span id='is_statement.v' class='invisible'><code>fn <a href='#method.is_statement' class='fnname'>is_statement</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<div class='docblock'><p>Returns whether this AST entity is categorized as a statement.</p>
+</div><h4 id='method.is_unexposed' class='method'><span id='is_unexposed.v' class='invisible'><code>fn <a href='#method.is_unexposed' class='fnname'>is_unexposed</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<div class='docblock'><p>Returns whether the categorization of this AST entity is unexposed.</p>
+</div><h4 id='method.is_in_main_file' class='method'><span id='is_in_main_file.v' class='invisible'><code>fn <a href='#method.is_in_main_file' class='fnname'>is_in_main_file</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<div class='docblock'><p>Returns whether this AST entity is in a main file.</p>
+</div><h4 id='method.is_in_system_header' class='method'><span id='is_in_system_header.v' class='invisible'><code>fn <a href='#method.is_in_system_header' class='fnname'>is_in_system_header</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<div class='docblock'><p>Returns whether this AST entity is in a system header.</p>
+</div></div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><span class='in-band'><code>impl&lt;'tu&gt; <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Copy.html' title='core::marker::Copy'>Copy</a> for <a class='struct' href='../clang/struct.Entity.html' title='clang::Entity'>Entity</a>&lt;'tu&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a id='src-4160' class='srclink' href='../src/clang/src/lib.rs.html#990' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'></div><h3 class='impl'><span class='in-band'><code>impl&lt;'tu&gt; <a class='trait' href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html' title='core::clone::Clone'>Clone</a> for <a class='struct' href='../clang/struct.Entity.html' title='clang::Entity'>Entity</a>&lt;'tu&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a id='src-4162' class='srclink' href='../src/clang/src/lib.rs.html#990' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.clone' class='method'><span id='clone.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone' class='fnname'>clone</a>(&amp;self) -&gt; <a class='struct' href='../clang/struct.Entity.html' title='clang::Entity'>Entity</a>&lt;'tu&gt;</code></span></h4>
+<div class='docblock'><p>Returns a copy of the value. <a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone">Read more</a></p>
+</div><h4 id='method.clone_from' class='method'><span id='clone_from.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from' class='fnname'>clone_from</a>(&amp;mut self, source: &amp;Self)</code><div class='since' title='Stable since Rust version 1.0.0'>1.0.0</div></span></h4>
+<div class='docblock'><p>Performs copy-assignment from <code>source</code>. <a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from">Read more</a></p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl&lt;'tu&gt; <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='struct' href='../clang/struct.Entity.html' title='clang::Entity'>Entity</a>&lt;'tu&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a id='src-1095' class='srclink' href='../src/clang/src/lib.rs.html#1652-1660' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.fmt' class='method'><span id='fmt.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, formatter: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></span></h4>
+<div class='docblock'><p>Formats the value using the given formatter.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl&lt;'tu&gt; <a class='trait' href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html' title='core::cmp::PartialEq'>PartialEq</a> for <a class='struct' href='../clang/struct.Entity.html' title='clang::Entity'>Entity</a>&lt;'tu&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a id='src-1100' class='srclink' href='../src/clang/src/lib.rs.html#1662-1666' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.eq' class='method'><span id='eq.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html#tymethod.eq' class='fnname'>eq</a>(&amp;self, other: &amp;<a class='struct' href='../clang/struct.Entity.html' title='clang::Entity'>Entity</a>&lt;'tu&gt;) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<div class='docblock'><p>This method tests for <code>self</code> and <code>other</code> values to be equal, and is used by <code>==</code>. <a href="https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html#tymethod.eq">Read more</a></p>
+</div><h4 id='method.ne' class='method'><span id='ne.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html#method.ne' class='fnname'>ne</a>(&amp;self, other: &amp;Rhs) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code><div class='since' title='Stable since Rust version 1.0.0'>1.0.0</div></span></h4>
+<div class='docblock'><p>This method tests for <code>!=</code>.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl&lt;'tu&gt; <a class='trait' href='https://doc.rust-lang.org/nightly/core/cmp/trait.Eq.html' title='core::cmp::Eq'>Eq</a> for <a class='struct' href='../clang/struct.Entity.html' title='clang::Entity'>Entity</a>&lt;'tu&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a id='src-1105' class='srclink' href='../src/clang/src/lib.rs.html#1668' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'></div><h3 class='impl'><span class='in-band'><code>impl&lt;'tu&gt; <a class='trait' href='https://doc.rust-lang.org/nightly/core/hash/trait.Hash.html' title='core::hash::Hash'>Hash</a> for <a class='struct' href='../clang/struct.Entity.html' title='clang::Entity'>Entity</a>&lt;'tu&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a id='src-1107' class='srclink' href='../src/clang/src/lib.rs.html#1670-1679' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.hash' class='method'><span id='hash.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/hash/trait.Hash.html#tymethod.hash' class='fnname'>hash</a>&lt;H:&nbsp;<a class='trait' href='https://doc.rust-lang.org/nightly/core/hash/trait.Hasher.html' title='core::hash::Hasher'>Hasher</a>&gt;(&amp;self, hasher: &amp;mut H)</code></span></h4>
+<div class='docblock'><p>Feeds this value into the state given, updating the hasher as necessary.</p>
+</div><h4 id='method.hash_slice' class='method'><span id='hash_slice.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/hash/trait.Hash.html#method.hash_slice' class='fnname'>hash_slice</a>&lt;H&gt;(data: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.slice.html'>&amp;[Self]</a>, state: &amp;mut H) <span class='where'>where H: <a class='trait' href='https://doc.rust-lang.org/nightly/core/hash/trait.Hasher.html' title='core::hash::Hasher'>Hasher</a></span></code><div class='since' title='Stable since Rust version 1.3.0'>1.3.0</div></span></h4>
+<div class='docblock'><p>Feeds a slice of this type into the state provided.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "clang";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../jquery.js"></script>
+    <script src="../main.js"></script>
+    
+    <script defer src="../search-index.js"></script>
+</body>
+</html>
